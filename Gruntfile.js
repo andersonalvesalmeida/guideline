@@ -14,9 +14,31 @@ module.exports = function(grunt) {
                     style: 'compressed'
                 },
                 files: {
-                    './public/css/main.css': './assets/css/main.scss'
+                    './public/css/guideline.css': './assets/css/main.scss'
                 }
             }
+        },
+        
+        
+        //used to replace the bootstrap fonts location to the 'fonts' directory
+        replace: {
+            another_example: {
+                src: ['./public/css/guideline.css'],
+                overwrite: true,                        // overwrite matched source files
+                replacements: [{
+                    from: 'bootstrap/',
+                    to: 'fonts/'
+                }]
+            }
+        },
+        
+        copy: {
+            main: {
+                src: 'bower_components/bootstrap-sass/vendor/assets/fonts/bootstrap/*',
+                dest: './public/fonts/',
+                flatten: true,
+                filter: 'isFile',
+            },
         },
 
         concat: {
@@ -27,14 +49,14 @@ module.exports = function(grunt) {
 				src: [
 				  './bower_components/jquery/dist/jquery.js',
                   './bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap.js',
-                  './bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js',
-                  './bower_components/bootstrap-datepicker/js/locales/bootstrap-datepicker.pt-BR.js',
+                  './bower_components/bootstrap-sass-datepicker/js/bootstrap-sass-datepicker.js',
+                  './bower_components/bootstrap-sass-datepicker/js/locales/bootstrap-datepicker.pt-BR.js',
                   './bower_components/noty/js/noty/packaged/jquery.noty.packaged.js',
                   './bower_components/noty/js/noty/themes/bootstrap.js',
-                  './bower_components/bootstrap-filestyle/src/bootstrap-filestyle.min.js',
+                  './bower_components/bootstrap-filestyle/src/bootstrap-filestyle.js',
 				  './assets/js/script.js'
 				],
-				dest: './public/js/script.js',
+				dest: './public/js/guideline.js',
 			}
 	    },
 
@@ -45,7 +67,7 @@ module.exports = function(grunt) {
             },
             dist: {
 				files: {
-					'./public/js/script.min.js': './public/js/script.js'
+					'./public/js/guideline.min.js': './public/js/guideline.js'
 				}
 	        }
         },
@@ -98,6 +120,8 @@ module.exports = function(grunt) {
  
     // 2. Where we tell Grunt we plan to use this plug-in.
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-text-replace');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
@@ -105,5 +129,4 @@ module.exports = function(grunt) {
  
     // 3. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('default', ['watch']);
- 
 };

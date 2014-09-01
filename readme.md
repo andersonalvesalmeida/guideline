@@ -3,6 +3,7 @@ Inslatt npm
 
 Install  gruntjs
         npm install -g grunt-cli
+        npm install to download all dependencies
         
 Start a new package.json (only to create a project)
 
