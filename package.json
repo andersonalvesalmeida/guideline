@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "grunt-contrib-copy": "^0.5.0",
+    "grunt-sass-convert": "^0.2.0",
     "grunt-text-replace": "^0.3.12"
   }
 }

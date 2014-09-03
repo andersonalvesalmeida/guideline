@@ -6,8 +6,32 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
  
         // Task settings here
+        
+        //Convert a css file tu a scss file
+        'sass-convert': {
+            options: {
+                from: 'css',
+                to: 'scss'
+            },
+            files: {
+                src: [
+                    'bower_components/datatables/media/css/jquery.dataTables.css',
+                    'bower_components/datatables-tabletools/css/dataTables.tableTools.css'
+                ]
+            }
+        },
+        
+         /*
+        'sass-convert': {
+            files: {
+                from: 'css',
+                to: 'scss',
+                src: 'bower_components/** ///*.css'
+            }
+        },
+        */
 
-        // Compile and compress Sass
+        //Compile and compress Sass
         sass: {
             dist: {
                 options: {
@@ -34,10 +58,20 @@ module.exports = function(grunt) {
         
         copy: {
             main: {
-                src: 'bower_components/bootstrap-sass/vendor/assets/fonts/bootstrap/*',
-                dest: './public/fonts/',
-                flatten: true,
-                filter: 'isFile',
+                files: [
+                    {
+                        src: 'bower_components/bootstrap-sass/vendor/assets/fonts/bootstrap/*',
+                        dest: './public/fonts/',
+                        flatten: true,
+                        filter: 'isFile',
+                    },{
+                        src: 'bower_components/datatables-tabletools/swf/*',
+                        dest: './public/swf/',
+                        flatten: true,
+                        filter: 'isFile',
+                    }
+                ]
+                
             },
         },
 
@@ -54,6 +88,9 @@ module.exports = function(grunt) {
                   './bower_components/noty/js/noty/packaged/jquery.noty.packaged.js',
                   './bower_components/noty/js/noty/themes/bootstrap.js',
                   './bower_components/bootstrap-filestyle/src/bootstrap-filestyle.js',
+                  './bower_components/datatables/media/js/jquery.dataTables.js',
+                  './assets/js/dataTables.bootstrap.js',
+                  './bower_components/datatables-tabletools/js/dataTables.tableTools.js',
 				  './assets/js/script.js'
 				],
 				dest: './public/js/guideline.js',
@@ -119,6 +156,7 @@ module.exports = function(grunt) {
     });
  
     // 2. Where we tell Grunt we plan to use this plug-in.
+    grunt.loadNpmTasks('grunt-sass-convert');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-text-replace');
     grunt.loadNpmTasks('grunt-contrib-copy');
