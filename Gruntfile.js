@@ -21,16 +21,6 @@ module.exports = function(grunt) {
             }
         },
         
-         /*
-        'sass-convert': {
-            files: {
-                from: 'css',
-                to: 'scss',
-                src: 'bower_components/** ///*.css'
-            }
-        },
-        */
-
         //Compile and compress Sass
         sass: {
             dist: {
@@ -38,7 +28,7 @@ module.exports = function(grunt) {
                     style: 'compressed'
                 },
                 files: {
-                    './public/css/guideline.css': './assets/css/main.scss'
+                    './guideline/css/guideline.css': './assets/css/main.scss'
                 }
             }
         },
@@ -46,8 +36,8 @@ module.exports = function(grunt) {
         
         //used to replace the bootstrap fonts location to the 'fonts' directory
         replace: {
-            another_example: {
-                src: ['./public/css/guideline.css'],
+            dist: {
+                src: ['./guideline/css/guideline.css'],
                 overwrite: true,                        // overwrite matched source files
                 replacements: [{
                     from: 'bootstrap/',
@@ -56,18 +46,35 @@ module.exports = function(grunt) {
             }
         },
         
+        //"../swf/copy_csv_xls_pdf.swf"
+        
         copy: {
             main: {
                 files: [
                     {
                         src: 'bower_components/bootstrap-sass/vendor/assets/fonts/bootstrap/*',
-                        dest: './public/fonts/',
+                        dest: 'guideline/fonts/',
                         flatten: true,
+                        expand: true,
                         filter: 'isFile',
                     },{
                         src: 'bower_components/datatables-tabletools/swf/*',
-                        dest: './public/swf/',
+                        dest: 'guideline/swf/',
                         flatten: true,
+                        expand: true,
+                        filter: 'isFile',
+                    },{
+                        src: 'bower_components/datatables/media/images/*',
+                        dest: 'guideline/images/',
+                        flatten: true,
+                        expand: true,
+                        filter: 'isFile',
+                    }
+                    ,{
+                        src: 'bower_components/datatables-tabletools/images/*',
+                        dest: 'guideline/images/',
+                        flatten: true,
+                        expand: true,
                         filter: 'isFile',
                     }
                 ]
@@ -89,11 +96,11 @@ module.exports = function(grunt) {
                   './bower_components/noty/js/noty/themes/bootstrap.js',
                   './bower_components/bootstrap-filestyle/src/bootstrap-filestyle.js',
                   './bower_components/datatables/media/js/jquery.dataTables.js',
-                  './assets/js/dataTables.bootstrap.js',
                   './bower_components/datatables-tabletools/js/dataTables.tableTools.js',
+                  './assets/js/dataTables.bootstrap.js',
 				  './assets/js/script.js'
 				],
-				dest: './public/js/guideline.js',
+				dest: './guideline/js/guideline.js',
 			}
 	    },
 
@@ -104,7 +111,7 @@ module.exports = function(grunt) {
             },
             dist: {
 				files: {
-					'./public/js/guideline.min.js': './public/js/guideline.js'
+					'./guideline/js/guideline.min.js': './guideline/js/guideline.js'
 				}
 	        }
         },
@@ -114,9 +121,9 @@ module.exports = function(grunt) {
             dynamic: {
                 files: [{
                     expand: true,
-                    cwd: './assets/image/',
+                    cwd: './assets/images/',
                     src: ['**/*.{png,jpg,gif,jpeg}'],
-                    dest: './public/image/'
+                    dest: './guideline/images/'
                 }]
             }
         },
@@ -147,7 +154,7 @@ module.exports = function(grunt) {
                     livereload: true
                 },
                 files: [
-                    '../../app/views/*.php', 'public/assets/css/*.css'
+                    '../../app/views/*.php', 'guideline/assets/css/*.css'
                 ]
             },
             */
@@ -167,4 +174,8 @@ module.exports = function(grunt) {
  
     // 3. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('default', ['watch']);
+    
+    
+    // Build
+	grunt.registerTask( 'build', ["sass-convert", "sass:dist", "replace:dist", "copy:main", "concat:javascript", "uglify", "imagemin"] );
 };

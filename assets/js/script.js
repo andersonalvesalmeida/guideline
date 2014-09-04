@@ -78,10 +78,49 @@
             }
         }
     });
+    /*
+    $.fn.dataTable.TableTools.defaults.aButtons = [ "pdf", "csv", "xls", {"sExtends":"print", "sButtonText": "Imprimir"} ];
+    $.fn.dataTable.TableTools.defaults.sSwfPath = "guideline/swf/copy_csv_xls_pdf.swf";
     
     $('.datatables').dataTable({
-        dom: 'T<"clear">lfrtip'
+        "dom": '<"wrapper"flipt>',
+        "ajax": {
+                    "url": 'data.txt',
+                    "deferRender": true,
+                    "dataSrc": "data"
+                }
     });
+    */
+    
+    $('.datatables').each(function(){
+        var ajax = $(this).data('ajax');
+        
+        if (typeof ajax !== 'undefined'){
+            var table = $(this).DataTable({
+                "ajax": {
+                    "url": ajax,
+                    "deferRender": true,
+                    "dataSrc": "data"
+                }
+            });    
+        }else{
+            var table = $(this).DataTable();
+        }
+        var tt = new $.fn.dataTable.TableTools( table, {
+            "aButtons": [
+                "csv",
+                "xls",
+                "pdf",
+                {"sExtends":"print", "sButtonText": "Imprimir"}
+            ],
+            "sSwfPath": "guideline/swf/copy_csv_xls_pdf.swf"
+        });
+    
+        $( tt.fnContainer() ).insertBefore('div.dataTables_wrapper');
+        
+    });
+    
+    
     
 
     
