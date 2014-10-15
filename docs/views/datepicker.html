@@ -1,0 +1,63 @@
+<h3>Componente para seleção de datas em formulários.</h3>
+
+<div class="col-md-6">
+	<h4>Referências</h4>
+	<p>
+	    <ul>
+	        <li>
+	            <a href="http://www.datatables.net/">http://www.datatables.net/</a>
+	        </li>
+	        <li>
+	            <a href="https://github.com/DataTables/TableTools.git">https://github.com/DataTables/TableTools.git</a>
+	        </li>
+	    </ul>
+	</p>
+
+	<h3>Datepicker básico</h3>
+
+	<p>Aplicação básica do componente com configurações padrão, construindo com javascript.</p>
+	<pre class="brush: jscript">
+		$('.datepicker').datepicker({
+		    format: 'dd/mm/yyyy',
+		    todayBtn: true,
+		    language: 'pt-BR',
+		    autoclose: true,
+		    todayHighlight: true
+		});
+	</pre>
+	<p>Essa inicialização já esta implementada na guideline. Para utilizar o datepicker básico, basta incluir o atributo <strong>datepicker</strong> no input.</p>
+	<p><code>&ltinput type="text" name="data" class="form-control datepicker" placeholder="dd/mm/aaaa"&sol;&gt;</code></p>
+	<p>Todos os datepicker devem utilizar o formato <strong>DD/MM/YYYY</strong> para formatação das datas. Para garantir este formato, é necessário o uso de máscaras e validação.</p>
+</div>
+
+<div class="col-md-6">
+	<h3>Exemplo</h3>
+	<form role="form" action="#" method="post" enctype="multipart/form-data">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="data">Data</label>
+				    <input type="text" name="data" class="form-control datepicker" placeholder="dd/mm/aaaa">
+				</div>
+			</div>
+		</div>	
+	</form>
+</div>
+
+<div class="clearfix"></div>
+
+
+
+<script type="text/javascript">
+
+	SyntaxHighlighter.all();
+
+	$('.datepicker').datepicker({
+    format: 'dd/mm/yyyy',
+    todayBtn: true,
+    language: 'pt-BR',
+    autoclose: true,
+    todayHighlight: true
+	});
+
+</script>

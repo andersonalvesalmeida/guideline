@@ -1,0 +1,71 @@
+<section>
+	<h4>Referências</h4>
+    <p>
+        <ul>
+            <li>
+                <a href="http://getbootstrap.com/javascript/#popovers">http://getbootstrap.com/javascript/#popovers</a>
+            </li>
+        </ul>
+    </p>
+	
+	<h2>Conceito</h2>
+	<p>
+		Utilizado para organizar um conjunto de interações ou informações que complementam um objetivo maior do usuário para com a interface.
+	</p>
+	<div class="row">
+    	<div class="col-md-6">
+	    <h3>Utilização</h3>
+		<ul>
+			<li>O elemento que irá conter a ação do popover deverá conter o atributo <code>data-[atributo]</code>.</li>
+			<li>Os atributos como título, conteúdo, orientação e etc podem ser informados atravez de Javascript ou data-[atributo] no HTML</li>
+		</ul>
+		<p>Veja a documentação completa em <a href="http://getbootstrap.com/javascript/#popovers">http://getbootstrap.com/javascript/#popovers</a>.</p>
+
+		<h3>Atributos via data-attributes</h3>
+
+		<pre class="brush: jscript">
+		&lt;a class="btn" id="btn-popover" href="#" 
+			data-toggle="popover"
+			data-trigger="hover"
+			data-title="Título"
+			data-content="Clique aqui para acessar"
+			data-placement="right"&gt;	Clique
+		&lt;/a&gt;
+		</pre>
+
+		<h3>Atributos via Javascript</h3>
+		<pre class="brush: jscript">
+		$("#btn-popover").popover({ 
+			placement: 'right',
+			trigger: 'hover',
+			content: 'Clique aqui para acessar',
+			title:'Título'
+		});
+		</pre>	
+    </div>
+    <div class="col-md-6">
+		<h3>Demonstração</h3>
+
+		<h4>Uso simples</h4>
+ 		<p>
+ 			<button popover="{{dynamicPopover}}" popover-title="{{dynamicPopoverTitle}}" class="btn btn-default">Clique para testar	</button>
+ 		</p>
+
+ 		<h4>Posicional</h4>
+	    <button popover-placement="top" popover="Acima!" class="btn btn-default">Acima</button>
+	    <button popover-placement="left" popover="A esquerda!" class="btn btn-default">Esquerda</button>
+	    <button popover-placement="right" popover="A direita!" class="btn btn-default">Direita</button>
+	    <button popover-placement="bottom" popover="Embaixo!" class="btn btn-default">Embaixo</button>
+
+	    <h4>Gatilhos</h4>
+	    <p>
+	      <button popover="Eu apareci com o evento mouse over!" popover-trigger="mouseenter" class="btn btn-default">Mouse Over</button>
+	    </p>
+	    <input type="text" value="Clique aqui!" popover="Eu apareci no evento on focus! Clique denovo para fechar..."  popover-trigger="focus" class="form-control">
+
+      </div> 
+  </div>
+  
+</section>
+
+

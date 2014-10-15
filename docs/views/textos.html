@@ -1,0 +1,244 @@
+<section>
+    <h4>Referências</h4>
+    <p>
+        <ul>
+            <li>
+                <a href="http://getbootstrap.com/css/#type">http://getbootstrap.com/css/#type</a>
+            </li>
+        </ul>
+    </p>
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Corpo de texto e títulos (Headings)</h1>
+            <h1>H1</h1>
+            <p><small class="muted">Helvetica Neue, Helvetica, Arial, sans-serif<br />Tamanho: 30px - Weight: Bold - Line-height: 36px</small></p>
+            <p>Utilizar em títulos principais de área, como no caso dessa página o título "Corpo de texto e títulos (Headings)" utiliza o cabeçalho de primeiro nível.</p>
+            <h2>H2</h2>
+            <p><small class="muted">Helvetica Neue, Helvetica, Arial, sans-serif<br />Tamanho: 18px - Weight: Bold - Line-height: 27px</small></p>
+            <p>Utilizar para destaques da terceira hierarquia informativa, como na área Listas, observe a aplicação nos títulos: Não Ordenada, Sem estilo, Ordenada, Descritivo.</p>
+
+            <div>
+                <h1>Utilização de CAIXA ALTA e Caixa Alta e Baixa</h1>
+                <h2>TUDO EM CAIXA ALTA:</h2> 
+                <p>Siglas e títulos das colunas nas tabelas, datagrids e abas.</p>
+                <h2>Caixa Alta e Baixa:</h2> 
+                <p>Títulos de livros, títulos de músicas, nomes próprios, como de pessoas, estados, países, nomes de setores (Ex.: Central de Reservas).</p>
+                <h2>Somente a primeira em caixa alta:</h2>
+                <p>Título da página, subtítulo da página, nome de áreas da página, início de alguma frase independente do texto (ex.: Destina-se a GISS à contribuição básica lorem ipsum etc.)</p>
+                <h2>tudo em caixa baixa:</h2>
+                <p>Substantivo comum após dois pontos (Ex.: Mês de inscrição: janeiro, Tipo de curso: natação e hidroginástica), cargos (exceto se estiverem no começo da frase ou como label de formulário, daí adota-se somente a primeira em Caixa alta)</p>
+            </div>
+
+            <h1>Abreviações</h1>
+            <p>Usar a tag <code>abbr</code> em termos abreviados, possibilitando as pessoas ver seu significado quando o usuário focalizar o mouse sobre a palavra.</p>
+            <p class="well">
+                A <abbr title="Unidade Orçamentária">UO</abbr> foi criada com sucesso. <br />
+            </p>
+        </div>
+        <div class="col-md-6">
+            <h2>Familia tipográfica</h2>
+            <p>Helvetica Neue, Helvetica, Arial, sans-serif</p>
+            <div>
+                <?php $letters = range('a', 'z'); ?>
+                <?php foreach ($letters as $letter) : ?>
+                <span class="letter"><?php echo $letter; ?></span>
+                <?php endforeach; ?>
+            </div>
+            <h2 style="margin-top:20px;">Títulos e subtítulos</h2>
+            <p>Títulos e subtítulos devem ser quebrados (título acima e subtitulo abaixo) e nào podem ter ponto final.</p>
+        </div>
+    </div>
+
+    <hr />
+
+    <h2>Listas</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Não ordenadas</h3>
+            <p>
+                <code>&lt;ul&gt;</code>
+            </p>
+            <ul>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Integer molestie lorem at massa</li>
+                <li>Facilisis in pretium nisl aliquet</li>
+                <li>
+                    Nulla volutpat aliquam velit
+                    <ul>
+                        <li>Phasellus iaculis neque</li>
+                        <li>Purus sodales ultricies</li>
+                        <li>Vestibulum laoreet porttitor sem</li>
+                        <li>Ac tristique libero volutpat at</li>
+                    </ul>
+                </li>
+                <li>Faucibus porta lacus fringilla vel</li>
+                <li>Aenean sit amet erat nunc</li>
+                <li>Eget porttitor lorem</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h3>Sem estilo</h3>
+            <p>
+                <code>&lt;ul class="list-unstyled"&gt;</code>
+            </p>
+            <ul class="list-unstyled">
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Integer molestie lorem at massa</li>
+                <li>Facilisis in pretium nisl aliquet</li>
+                <li>
+                    Nulla volutpat aliquam velit
+                    <ul>
+                        <li>Phasellus iaculis neque</li>
+                        <li>Purus sodales ultricies</li>
+                        <li>Vestibulum laoreet porttitor sem</li>
+                        <li>Ac tristique libero volutpat at</li>
+                    </ul>
+                </li>
+                <li>Faucibus porta lacus fringilla vel</li>
+                <li>Aenean sit amet erat nunc</li>
+                <li>Eget porttitor lorem</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h3>Ordenadas</h3>
+            <p>
+                <code>&lt;ol&gt;</code>
+            </p>
+            <ol>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Integer molestie lorem at massa</li>
+                <li>Facilisis in pretium nisl aliquet</li>
+                <li>Nulla volutpat aliquam velit</li>
+                <li>Faucibus porta lacus fringilla vel</li>
+                <li>Aenean sit amet erat nunc</li>
+                <li>Eget porttitor lorem</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div>
+                <h3>Lista descritiva vertical</h3>
+            </div>
+            <p>
+                <code>&lt;dl&gt;</code>
+            </p>
+            <dl>
+                <dt>Administradores</dt>
+                <dd>Possuem acesso a todos os recursos do sistema</dd>
+                <dt>Gerentes de unidade</dt>
+                <dd>
+                    Possuem acesso a todos os recursos no universo da unidade ao qual é resposável.
+                </dd>
+            </dl>
+        </div>
+        <div class="col-md-8">
+            <h3>Lista descritiva horizontal</h3>
+            <p>
+                <code>&lt;dl class="dl-horizontal"&gt;</code>
+            </p>
+            <dl class="dl-horizontal">
+                <dt>SP</dt>
+                <dd>São Paulo</dd>
+                <dt>RJ</dt>
+                <dd>Rio de janeiro</dd>
+                <dt>AM</dt>
+                <dd>Amazonas</dd>
+            </dl>
+        </div>
+        <div class="col-md-12">
+            <div class="alert alert-info">
+                <p>
+                    <span class="label label-info">Atenção!</span>
+                    Listas descritivas horizontais foram criadas para exibir informações com termos curtos, com limitação a 160 pixels. Se for preciso exceder este limite, deve-se usar uma tabela para a exibção das informações.
+                    Em telas pequenas ou dispositivos móveis o layout dessa lista será substituído, onde todos os itens ficarão empilhados.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Duplas condicionais</h3>
+            <p>Duplas de condicionais (provavelmente serão avaliadas em cada sistema, quando não, seguir esse padrão)</p>
+            <ul>
+                <li>Quando há reiteração da ação: cancelar – salvar </li>
+                <li>Quando há pergunta: cancelar – confirmar</li>
+            </ul>
+
+            <h4>Exemplo de utilização</h4>
+
+            <ul>
+                <li>Ação de editar: cancelar – salvar </li>
+                <li>Ação de incluir: cancelar – salvar</li>
+                <li>Ação de exclusão: cancelar – confirmar</li>
+            </ul>
+
+            <h3>Outras observações</h3>
+            <ul>
+                <li>
+                    Quando um termo for composto de duas palavras para ganhar seu sentido total, apenas a primeira deve ser iniciada com letra maíscula.
+                </li>
+                <li>
+                    Observar a hierarquia de informação. Não utilizar diversos elementos <code>h1</code> dentro de um mesmo documento.
+                    Procure sempre efetuar a hierarquia da informação de forma que o usuário, sem a utilização da folha de estilos, consiga
+                    perceber a importância das informações.
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h3>Exemplos de termos</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Buscar</h4>
+                    <p>Rótulo para campos de busca e botões de ação de busca.</p>
+                    <p class="alert alert-danger">Não usar Search, Find, Browse, Busca, Encontrar.</p>
+
+                    <h4>Ajuda</h4>
+                    <p>Para se referir a página de ajuda. </p>
+                    <p class="alert alert-danger">Não usar Help, FAQ, Perguntas Frequentes, Dúvidas</p>
+
+                    <h4>Editar</h4>
+                    <p>deve ser usado quando estamos alterando as propriedades de um conteúdo já existente.</p>
+                    <p class="alert alert-danger">Não usar Alterar, Modificar</p>
+
+                    <h4>Incluir</h4>
+                    <p>deve ser usado quando estamos adicionando um item já existente dentro de uma lista. Geralmente o termo é
+                        utilizado para referir-se a pessoas. Exceção quando a palavra indica explicitamente outra coisa como:
+                        Incluir Item.</p>
+                    <p class="alert alert-danger">Não usar Adicionar, Inserir, Include.</p>
+                </div>
+
+                <div class="col-md-6">
+                    <h4>Página inicial</h4>
+                    <p>
+                        Para se referir a página inicial do sistema. Quando o usuário posicionar o mouse sobre o nome do
+                        sistema deverá aparecer <strong>Página inicial - Nome do Sistema</strong>.
+                    </p>
+                    <p class="alert alert-danger">Não usar Help, FAQ, Perguntas Frequentes, Dúvidas</p>
+
+                    <h4>Adicionar</h4>
+                    <p>Em situações onde um novo item será criado pelo usuário.</p>
+                    <p class="alert alert-danger">Não usar Novo item, Criar, Add, Incluir, Adicionar novo.</p>
+
+                    <h4>Excluir</h4>
+                    <p>para a ação de remover um conteúdo permanentemente. </p>
+                    <p class="alert alert-danger">Não usar Remover, Apagar, Deletar, Delete, Remove, Exclude.</p>
+
+                    <h4>Alterar</h4>
+                    <p>deve ser usado quando estamos tratando da mudança de algum filtro, como o de período por exemplo. </p>
+                    <p class="alert alert-danger">Não usar Modificar, Mudar, Editar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

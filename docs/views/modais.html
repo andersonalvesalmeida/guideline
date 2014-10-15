@@ -1,0 +1,66 @@
+<section>
+    <h4>Referências</h4>
+    <p>
+      <ul>
+          <li>
+              <a href="http://getbootstrap.com/javascript/#modals">http://getbootstrap.com/javascript/#modals</a>
+          </li>
+      </ul>
+    </p>
+
+    <div class="row">
+        <div class="col-md-3">
+            <p>O recurso de tela modal é para focar a atenção do usuário e garantir alguma ação que seja estratégica. 
+A tela modal deverá sempre ter o ícone ‘x’ de saída 
+Sempre deve haver entre umas das opções de botão a ação ‘Cancelar’
+Sempre o botão primário e o de baixa relevância estarão posicionados fora do scroll (quando houver scroll)
+A modal terá o tamanho máximo de 640px.</p>
+            <h3>Quando utilizar modal: </h3>
+            <p>Inclusão de itens, formulários simples, edição</p>
+            <h3>Quando não utilizar modal: </h3>
+            <p>Ações de rotina, ações wizard, exibição de tabelas, datagrids e outros elementos mais complexos</p>
+            <p>Sistemas com navegação específica para mobile não devem ter modal.</p>
+            <p>
+                <a class="btn" data-toggle="modal" href="#myModal">Abrir exemplo de Modal</a>
+            </p>
+        </div>
+        <div class="col-md-9">
+            <div class="well modal-example" style="background-color: #888; border: none;">
+                <div class="modal" style="position: relative; top: auto; left: auto; margin: 0 auto; z-index: 1; max-width: 100%;">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h3>Título Modal</h3>
+                    </div>
+                    <div class="modal-body">
+                        <p>Texto do conteúdo</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="" class="btn">Cancelar</a>
+                        <a href="" class="btn btn-primary">Salvar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal hide fade" id="myModal">
+    <form class="modal-form">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">×</button>
+            <h3>Título Modal</h3>
+        </div>
+        <div class="modal-body">
+            <p>Observe que nas telas modais os títulos (labels) ficam acima dos componentes, como podemos ver no textimput. Essa é uma regra que acontece para todos os formulários em telas modais.</p>
+            <p>Observe também que as ações de salvar e cancelar ficam a direita e não a esquerda seguindo o formulário, pelo contrário, ela é independente inclusive das rolagens, ficando estática. Você pode ver esse comportamento devido a grande quantidade de texto na modal, que poderia ser representada também por uma grande quantidade de componentes. <br />
+              <br />
+            Reforçando novamente que as ações primárias ficam a direita e secundárias e de baixa relevância a esquerda, como podemos observar também nesses botões.</p>
+
+            <?php include('includes/long_form.php'); ?>
+        </div>
+        <div class="modal-footer">
+            <button href="" class="btn" data-dismiss="modal">Cancelar</button>
+            <button href="" class="btn btn-primary">Salvar</button>
+        </div>
+    </form>
+</div>

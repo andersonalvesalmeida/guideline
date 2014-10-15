@@ -1,0 +1,326 @@
+<section>
+	<h4>Referências</h4>
+    <p>
+        <ul>
+            <li>
+                <a href="http://getbootstrap.com/css/#buttons">http://getbootstrap.com/css/#buttons</a>
+            </li>
+        </ul>
+    </p>
+
+	<h2>Botões principais</h2>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th width="100px">Botão</th>
+				<th width="200px" class="hidden-phone">class=""</th>
+				<th>Descrição</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+				<button class="btn" href="#">
+					Cancelar
+				</button></td>
+				<td class="hidden-phone"><code>
+					btn</code></td>
+				<td>Botão padrão para ações de baixa relevância. Esse estilo de botões poderá ser utilizado em outros locais sempre que a relevância for extremamente baixa, ou seja, não quiser chamar a atenção do usuário para a ação mas existe a necessidade da ação existir.</td>
+			</tr>
+			<tr>
+				<td>
+				<button class="btn btn-primary" href="#">
+					Adicionar
+				</button></td>
+				<td class="hidden-phone"><code>
+					btn btn-primary</code></td>
+				<td> Botões para ações primárias que devem ser feitas na interface. </td>
+			</tr>
+			<tr>
+				<td>
+				<button class="btn btn-secondary" href="#">
+					Associar usuários
+				</button></td>
+				<td class="hidden-phone"><code>
+					btn btn-secondary</code></td>
+				<td>Botão para ações secundárias</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>Botões auxiliares</h2>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th width="100px">Botão</th>
+				<th width="200px" class="hidden-phone">class=""</th>
+				<th>Descrição</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+				<button class="btn btn-warning" href="#">
+					Remover associação
+				</button></td>
+				<td class="hidden-phone"><code>
+					btn btn-warning</code></td>
+				<td> O usuário deve ter atenção pois a ação pode influir outras áreas da aplicação. </td>
+			</tr>
+			<tr>
+				<td>
+				<button class="btn btn-danger" href="#">
+					Remover curso
+				</button></td>
+				<td class="hidden-phone"><code>
+					btn btn-danger</code></td>
+				<td> Indica que a ação que o usuário irá tomar pode impactar a utilização do sistema ou de algum componente específico. </td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>Botões com ícone e nomenclatura</h2>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th style="min-width:100px">Botão</th>
+				<th>Descrição</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+				<button class="btn print-page">
+					<i class="icon-print"></i>Imprimir
+				</button></td>
+				<td>O botão de impressão será utilizado somente quando for especificado na aplicação. Sempre deve ser incluido no topo direito da aplicação</td>
+			</tr>
+			<tr>
+				<td>
+				<button class="btn btn-help" data-toggle="modal" href="#modal-help">
+					<i class="icon-question-sign"></i>Ajuda
+				</button></td>
+				<td>O botão de ajuda também será utilizado somente quando for especificado na aplicação, assim como o botão de impressão. Também deve ser incluido no topo direito e abrir uma modal com o texto relativo.</td>
+			</tr>
+			<tr>
+				<td>
+				<div class="btn-group">
+					<a class="btn btn-small" data-fontcontrol="decrement" disabled> <i class="icon-font-decrease"></i> </a>
+					<a class="btn btn-small" data-fontcontrol="increment"> <i class="icon-font-increase"></i> </a>
+				</div></td>
+				<td>Botões de controle de controle de tamanho devem estar presentes em todas as páginas.</td>
+			</tr>
+			<tr>
+				<td>
+				<button title="Buscar" class="btn btn-inverse" href="#">
+					<i class="icon-search icon-white"></i>
+				</button></td>
+				<td> Botões que tem ícones, com exceção de "imprimir" e "ajuda", deverão possuir tooltip e não possuem nomenclatura. </td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>Botões de exclusão</h2>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th width="100px">Botão</th>
+				<th width="200px" class="hidden-phone">class=""</th>
+				<th>Descrição</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+				<button class="btn btn-primary" href="#">
+					Excluir
+				</button></td>
+				<td class="hidden-phone"><code>
+					btn btn-primary</code></td>
+				<td> Botão com ação de excluir com importância primária. </td>
+			</tr>
+			<tr>
+				<td>
+				<button class="btn btn-secondary" href="#">
+					Excluir
+				</button></td>
+				<td class="hidden-phone">
+					<code>btn btn-secondary</code>
+				</td>
+				<td> Botão com ação de excluir com importância secundária. </td>
+			</tr>
+			<tr>
+				<td>
+				<button class="btn btn-primary" href="#">
+					<i class="icon-trash icon-white"></i>
+				</button>
+				</td>
+				<td class="hidden-phone">
+				<code>
+					icon-trash icon-white
+				</code>
+				</td>
+				<td> Indica a ação de excluir em linhas de tabelas e pequenos espaços
+					<div class="actions btn-group"> 
+        <button href="#" class="btn btn-mini delete" title="Excluir"> 
+            <i class="icon-trash icon-white"></i> 
+        </button> 
+        <a href="#" class="btn btn-secondary" title="Visualizar"> 
+          <i class="icon-search icon-white"></i> 
+        </a>
+        <a href="#" class="btn btn-primary" title="Editar"> 
+          <i class="icon-pencil icon-white"></i> 
+        </a>
+        
+      </div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div class="row">
+		<div class="col-md-4">
+			<h3>Botões para ações</h3>
+			<p>
+				Como convenção, os botões só deve ser utilizado para ações enquanto hiperlinks devem ser utilizados para os objetos. Por exemplo, "Download" deve ser um botão, enquanto "atividade recente" deve ser um link.
+			</p>
+			<p>
+				Estilos de botão pode ser aplicado a qualquer coisa com a classe btn. Aplicada. No entanto, normalmente você vai querer aplicá-las as
+				<code>
+					âncoras</code>
+				apenas e elementos do tipo
+				<code>
+					button</code>
+				.
+			</p>
+
+			<h3>Compatibilidade</h3>
+			<p>
+				IE9 não corta gradientes de fundo em cantos arredondados, então resolvemos removê-los neste browser.
+				Ainda sobre o IE9, quando desativamos um
+				<code>
+					button</code>
+				, o browser coloca um texto cinza com uma sombra
+				que infelizmente não podemos resolver utilizando os recursos atuais disponíveis.
+			</p>
+
+		</div>
+		<div class="col-md-4">
+
+			<h3>Uma class, multiplas tags.</h3>
+			<p>
+				Você pode utilizar a classe
+				<code>
+					.btn</code>
+				nas tags
+				<code>
+					&lt;a&gt;</code>
+				,
+				<code>
+					&lt;button&gt;</code>
+				, ou
+				<code>
+					&lt;input&gt;</code>
+				conforme o exemplo abaixo. O resultado dessa aplicação deve ser
+				uniforme, idependente da tag utilizada.
+			</p>
+
+			<form>
+				<a class="btn" href="">Link</a>
+				<button class="btn" type="submit">
+					Button
+				</button>
+				<input class="btn" type="button" value="Input" />
+				<input class="btn" type="submit" value="Submit" />
+			</form>
+			<script src="https://gist.github.com/3049211.js?file=guideline_buttons.html"></script>
+
+			<p>
+				Como uma boa prática, tente sempre utilizar o tipo correto de botão para garantir uma renderização correta em diversos
+				browsers. Se você tem um
+				<code>
+					form</code>
+				, utilize um
+				<code>
+					&lt;input type="submit" class="btn"&gt;</code>
+				como botão para submeter o formulário.
+			</p>
+			<h3>Desabilitados</h3>
+			<p>
+				Para botões desabilitados, utilize a classe
+				<code>
+					.disabled</code>
+				para desabilitar botões em formado de
+				<code>
+					âncora</code>
+				e o atributo
+				<code>
+					disabled</code>
+				para elementos do tipo
+				<code>
+					button</code>
+				.
+			</p>
+			<p>
+				<a href="#" class="btn disabled">Link</a>
+				<a href="#" class="btn btn-primary disabled">Link</a>
+			</p>
+			<p style="margin-bottom: 18px;">
+
+				<button class="btn" disabled="">
+					Ação de baixa relevância
+				</button>
+				<button class="btn btn-primary disabled" disabled="disabled">
+					Ação Primária
+				</button>
+			</p>
+		</div>
+		<div class="col-md-4">
+			<h3>Composição</h3>
+			<p>
+				A composição dos botões quando estiverem alinhados lado a lado deverá ser sempre com o primário posicionado à direita e o secundário à esquerda, tal como no exemplo:
+			</p>
+			<p>
+				<a class="btn btn-secondary">Rejeitar</a>
+				<a class="btn btn-primary">Aceitar</a>
+			</p>
+			<p>
+				No entanto, quando existir uma ação de menor relevância como o botão "cancelar", devemos utilizar o botão correspondente a sua relevância baixa, tal como no exemplo:
+			</p>
+			<p>
+				<a class="btn">Cancelar</a>
+				<a class="btn btn-primary">Aceitar</a>
+			</p>
+			<!-- <p>A mesma coisa acontece no uso de botões de ações com iconografia. Tal como:</p>
+			<p>
+			<a  class="btn btn-small btn-danger" rel="tooltip" title="Reprovar" data-toggle="modal" data-target="#justificationModal">
+			<i class="icon-remove icon-white"></i>
+			</a>
+			<a  class="btn btn-small btn-success" rel="tooltip" title="Aprovar">
+			<i class="icon-ok icon-white"></i>
+			</a>
+			</p> -->
+			<p class="alert alert-warning">
+				<span class="badge badge-warning">Exceção</span> Acontecerá a ação inversa somente no uso de janelas modaisou botões de ação referentes á uma tabela, onde o sua posição será a direita.
+			</p>
+		</div>
+	</div>
+
+	<div class="modal hide fade" id="modal-help">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">
+				×
+			</button>
+			<h3>Ajuda</h3>
+		</div>
+		<div class="modal-body">
+			Texto de ajuda
+		</div>
+		<div class="modal-footer">
+			<button href="#" class="btn" data-dismiss="modal">
+				Fechar
+			</button>
+		</div>
+	</div>
+
+</section>

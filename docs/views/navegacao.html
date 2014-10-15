@@ -1,0 +1,152 @@
+<div class="row">
+  <div id="moduleContainer" class="col-md-12">
+      <p>Os princípios de navegação ocorrem através da aplicação correta de cores, que indicam ações primárias, secundárias e de menor relevância. Através de links indicativos, referências visuais como iconografia, e ainda através do comportamento padronizado dos componentes, como o uso de Accordiom, Tabelas, e outros.<br />
+        Vamos abordar aqui algumas dessas situações como referência.</p>
+    </div>
+      <div class="col-md-12">
+        <h2 id="breadcrumbs">Breadcrumbs</h2>
+        <p>O Breadcrumb tem o link da cor padrão da aplicação, todo o caminho é feito através de links, portanto, navegável. Somente a localização atual do usuário não possui link, sendo um texto puro.</p>
+
+        <ul class="breadcrumb">
+          <li><a href="">Link Principal</a> <span class="divider">»</span></li>
+          <li class="active">Localização Atual</li>
+        </ul>
+
+        <p>Sempre representar a navegação atual da barra de navegação principal do sistema no breadcrumb, existindo sobre esse fator a exceção do breadcrumb dinâmico, como por exemplo, a página de detalhes de um usuário onde o breadcrumb deve conter um item contendo o nome do usuário sendo detalhado.</p>
+
+      </div>
+      <div>
+        <div class="btn-group pull-left"></div>
+      </div>
+      <div class="col-md-12">
+        <h2 id="navbar">Barra de Navegação e Dropdowns</h2>
+        <p>A barra de navegação é uma das ferramentas mais importantes para o usuário, é através dela que ele poderá navegar entre as diversas áreas da aplicação. Ter sua informação clara e objetiva é fator fundamental para o sucesso de uma aplicação.</p>
+
+        <p>Dessa forma o seu uso é simples, com letras grandes e com alto contraste.<br />Possui a	sua	esquerda	o	nome	indicativo	da aplicação em que o usuário se encontra, uma vez que ele passar o mouse por cima do nome aparece um tooltip indicando a ele que poderá ao clicar voltar para a página inicial dessa aplicação.
+
+        Quando se passa o mouse por cima dos links os mesmos ficam a base preta aumentando ainda mais o contraste para a leitura do texto, e ao selecionar um destes links a base passa a ser da cor principal da aplicação, como indicativo ao usuário da localização em que ele se encontra, tal cor se destaca na barra as demais e indica de maneira eficiente a informação necessária.</p>
+
+        <p>O comportamento dos dropdowns na barra de navegação é idêntico aos demais que seguem abaixo, o que muda é sua relevância. Na barra só poderá ser usado quando uma página contiver conteúdo distinto mas que estejam agrupados hierarquicamente pela informação.</p>
+
+        <nav class="navbar navbar-default" role="navigation" style="margin-bottom: 30px">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="glyphicon glyphicon-bar"></span>
+                <span class="glyphicon glyphicon-bar"></span>
+                <span class="glyphicon glyphicon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Nome da aplicação</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Buscar">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+              </form>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+
+
+		<p>Outro comportamento importante para a barra de navegação é a fixação no topo quando há rolagem na página. Desta forma a barra ficará sempre visível e fixa no topo.
+		Para que este efeito seje possivel, deve ser incluído os atributos <code>data-spy="affix" data-offset-top="90"</code>.
+		Exemplo:
+    <pre class="prettyprint">
+    &lt;div class="application-navbar navbar" data-spy="affix" data-offset-top="90"&gt;
+        &lt;div class="navbar-inner"&gt;
+            &lt;div class="container"&gt;
+            .
+            .
+            .
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+		</p>
+		
+        <p>Já os dropdowns abaixo servem para agrupamento de ações que o usuário pode tomar. Por padrão eles devem sempre ser apresentados como um botão de baixa relevância.</p>
+
+      <!-- Single button -->
+      <div class="btn-group" dropdown is-open="status.isopen">
+        <button type="button" class="btn btn-default dropdown-toggle" ng-disabled="disabled">
+          Baixa Relevância <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-12">
+        <h2 id="action-types">Tipos de Ações</h2>
+        <p>Botão Primário</p>
+        <p> <a class="btn btn-primary">Label</a></p>
+        <p>Botão Secundário</p>
+        <p> <a class="btn btn-secondary">Label</a></p>
+        <p>A composição desses botões quando estiver alinhados lado a lado deverá ser sempre com o primário a direita e o secundário a esquerda, tal como no exemplo:</p>
+        <p><a class="btn btn-secondary">Ação Secundária</a> <a class="btn btn-primary">Ação Primária</a></p>
+        <p>Exemplo prático:</p>
+        <p><a class="btn btn-secondary">Rejeitar</a> <a class="btn btn-primary">Aceitar</a></p>
+        <p>No entanto quando existir uma ação de menor relevância como o botão Cancelar, então devemos utilizar o botão correspondente a sua relevância baixa, tal como no exemplo:</p>
+        <p><a class="btn">Cancelar</a> <a class="btn btn-primary">Aceitar</a></p>
+        <p>A mesma coisa acontece no uso de botões de ações com iconografia. Tal como:</p>
+
+        <p>
+          <a class="btn btn-danger" data-tooltip="Reprovar">
+            <i class="glyphicon glyphicon-remove glyphicon glyphicon-white"></i>
+          </a>
+          <a class="btn btn-success" data-tooltip="Aprovar">
+            <i class="glyphicon glyphicon-ok glyphicon glyphicon-white"></i>
+          </a>
+        </p>
+
+        <div class="alert">Exceção: Acontecerá a ação inversa somente no uso de janelas modais onde o formulário forcará a ação primária a sua posição a esquerda.</div>
+        <p>Existem ainda ações de baixa relevância como pode conferir nos botões a direita superior de Imprimir e Ajuda.	Esse	estilo	de	botões	poderá	ser utilizado em outros locais sempre que a relevância for extremamente baixa, ou seja, não quiser chamar a atenção do usuário para a ação mas existe a necessidade da ação existir.</p>
+        <p>
+          <a class="btn">
+            <i class="glyphicon glyphicon-print"></i>
+            Imprimir
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

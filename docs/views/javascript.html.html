@@ -1,0 +1,118 @@
+<section>
+
+ <!-- Tabs
+    ================================================== -->
+    <section id="tabs">
+		<div class="row">
+        <div class="col-md-3 columns">
+          <p>Este plugin adiciona rapidez, dinamismo e funcionalidade para fazer a transição por meio de conteúdo local.</p>
+          <a href="http://twitter.github.com/bootstrap/assets/js/bootstrap-tab.js" target="_blank" class="btn">Download do arquivo</a>
+        </div>
+        <div class="col-md-9 columns">
+          <h2>Exemplo de abas</h2>
+          <p>Clique nas abas abaixo para alternar entre os painéis ocultos, mesmo através de menus suspensos.</p>
+          <ul id="myTab" class="nav nav-tabs">
+            <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+            <li><a href="#profile" data-toggle="tab">Perfil</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#dropdown1" data-toggle="tab">Menu 1</a></li>
+                <li><a href="#dropdown2" data-toggle="tab">Menu 2</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade in active" id="home">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac massa augue. Vivamus bibendum feugiat elit, id tempus ligula hendrerit quis.</p>
+            </div>
+            <div class="tab-pane fade" id="profile">
+              <p> In vitae tellus sed ante ultrices tincidunt. Mauris pellentesque nulla erat, ac vehicula lacus. In facilisis ornare felis, sit amet suscipit dui pellentesque porta. Proin rhoncus lorem ut ligula egestas iaculis. Ut sit amet odio ipsum, sit amet condimentum nisi. Donec auctor hendrerit scelerisque. Curabitur faucibus bibendum lobortis. Cras sodales ultrices dui, sit amet ultricies sem egestas mattis. Integer feugiat feugiat orci, ut bibendum justo aliquam eget. Sed tincidunt venenatis dui ut pulvinar. Sed risus est, dapibus a laoreet a, tincidunt id purus.
+</p>
+            </div>
+            <div class="tab-pane fade" id="dropdown1">
+              <p>Cras ultricies leo non mi tempor euismod. Integer mauris tellus, pulvinar eu aliquet eu, placerat at felis. Sed consequat, magna et euismod egestas, elit est vulputate mi, nec ultricies odio ipsum ac sapien. Vivamus tellus purus, feugiat vitae pharetra ut, tincidunt ut ante. Ut tellus quam, vehicula vestibulum placerat ac, accumsan rutrum lorem. Praesent malesuada, massa sit amet gravida pellentesque, eros nunc eleifend augue, sed placerat ligula metus eu nibh. Donec porttitor aliquet arcu, non varius eros faucibus sed. Maecenas eget nisl neque, at tincidunt felis. Pellentesque odio est, auctor non egestas ut, pulvinar in nisi.</p>
+            </div>
+            <div class="tab-pane fade" id="dropdown2">
+              <p>Quisque auctor placerat libero, quis mattis felis accumsan in. Mauris id tincidunt lacus. Maecenas mauris mi, egestas in tristique id, tincidunt mattis ante. Suspendisse velit turpis, lacinia in pellentesque ut, tristique a orci. Nam euismod justo et nulla pharetra quis dapibus nibh consectetur. Suspendisse pretium elementum laoreet. Quisque nec lacus at lectus cursus vehicula in sit amet risus. Nunc vitae est et elit posuere faucibus porta ac dui. Aenean dui leo, tincidunt condimentum facilisis vitae, euismod a nibh. Sed ullamcorper tempus massa et euismod. Duis at augue massa. Ut nec enim quam. Duis metus purus, aliquam at vehicula vitae, varius vitae tortor. Duis vel sollicitudin dui.</p>
+            </div>
+          </div>
+          <hr>
+          <h2>Usando bootstrap-tab.js</h2>
+          <p>Ativar abas via javascript (cada guia precisa ser ativado individualmente):</p>
+<pre class="prettyprint">
+$('#myTab a').click(function (e) {
+  e.preventDefault();
+  $(this).tab('show');
+})</pre>
+          <p>Você pode ativar abas individuais de várias maneiras:</p>
+<pre class="prettyprint">
+$('#myTab a[href="#profile"]').tab('show'); // Select tab by name
+$('#myTab a:first').tab('show'); // Select first tab
+$('#myTab a:last').tab('show'); // Select last tab
+$('#myTab li:eq(2) a').tab('show'); // Select third tab (0-indexed)
+</pre>
+          <h3>Marcação</h3>
+          <p>Você pode ativar uma aba de navegação ou pílula sem escrever qualquer javascript simplesmente especificando<code>data-toggle="tab"</code> ou <code>data-toggle="pill"</code> ou um elemento. Adicionando o <code>nav</code> e <code>nav-tabs</code> classes de uma aba <code>ul</code> irá aplicar o estilo guia bootstrap.</p>
+<pre class="prettyprint">
+&lt;ul class="nav nav-tabs"&gt;
+  &lt;li&gt;&lt;a href="#home" data-toggle="tab"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#profile" data-toggle="tab"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#messages" data-toggle="tab"&gt;Messages&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#settings" data-toggle="tab"&gt;Settings&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+          <h3>Métodos</h3>
+          <h4>$().tab</h4>
+          <p>
+            Ativa um elemento aba e recipiente de conteúdo. A aba deve ter <code>data-target</code> ou um <code>href</code> visando um container node no DOM.
+          </p>
+<pre class="prettyprint">
+&lt;ul class="nav nav-tabs" id="myTab"&gt;
+  &lt;li class="active"&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#profile"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#messages"&gt;Messages&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#settings"&gt;Settings&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab-content"&gt;
+  &lt;div class="tab-pane active" id="home"&gt;...&lt;/div&gt;
+  &lt;div class="tab-pane" id="profile"&gt;...&lt;/div&gt;
+  &lt;div class="tab-pane" id="messages"&gt;...&lt;/div&gt;
+  &lt;div class="tab-pane" id="settings"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  $(function () {
+    $('#myTab a:last').tab('show');
+  })
+&lt;/script&gt;</pre>
+          <h3>Eventos</h3>
+          <table class="table table-bordered table-striped">
+            <thead>
+             <tr>
+               <th style="width: 150px;">Evento</th>
+               <th>Descrição</th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+               <td>Show</td>
+               <td>Este evento é acionado na aba guia, mas antes da nova aba ser mostrada. Use <code>event.target</code> and <code>event.relatedTarget</code> para direcionar a aba ativa e ativa então a aba anterior (se disponível), respectivamente.</td>
+            </tr>
+            <tr>
+               <td>shown</td>
+               <td>Este evento é acionado na aba principal e depois que uma aba tem sido demonstrada. Use <code>event.target</code> e <code>event.relatedTarget</code> para direcionar a aba ativa e então ativa a aba anterior (se disponível), respectivamente.</td>
+             </tr>
+            </tbody>
+          </table>
+
+ <pre class="prettyprint">
+$('a[data-toggle="tab"]').on('shown', function (e) {
+  e.target // activated tab
+  e.relatedTarget // previous tab
+})</pre>
+       </div>
+</div>
+
+
+</section>
