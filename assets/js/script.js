@@ -14,7 +14,7 @@
 
 	//gerenciar notificações
 	/*
-	* Generate a new nitification, types: alert, information, error, warning, notification, success
+	* Generate a new notification, types: alert, information, error, warning, notification, success
 	*/
 	function generate(type, text) {
         var timeout = 5000;
