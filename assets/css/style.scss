@@ -1,3 +1,32 @@
+h1, .h1 {
+	font-size: 24px;
+}
+.dataTables_processing{
+	display: none !important;
+}
+
+//
+.table {
+  // Cells
+  > thead,
+  > tfoot {
+      background-color: $brand-primary;
+      color: $btn-default-bg;
+      font-size: $font-size-small;
+      tr{
+        td, th{
+          text-transform: uppercase !important;
+          text-align: left !important;
+        }
+      }
+  }
+}
+
+.nowrap{
+  white-space: nowrap;
+}
+
+
 .notify{
     display: none;
 }
