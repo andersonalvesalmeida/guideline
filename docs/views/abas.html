@@ -1,0 +1,69 @@
+<section>
+
+  <h4>Referências</h4>
+  <p>
+    <ul>
+      <li>
+        <a href="http://getbootstrap.com/javascript/#tabs">http://getbootstrap.com/javascript/#tabs</a>
+      </li>
+    </ul>
+  </p>
+
+  <p>
+		O conceito de abas poderá ser usado para dinamizar e facilitar a navegação entre as informações do mesmo gênero. As abas auxiliam a trazer as informações para o usuário de forma separada, facilitando o entendimento da mesma. Dessa forma o usuário poderá também localizar rapidamente a área que deseja visualizar, sem que para isso seja preciso utilizar muito o scroll para navegar em uma página complexa.
+	</p>
+  <div class="row">
+  <div class="col-md-4">
+    <h3>O que está incluído</h3>
+    <p>Você poderá altenar entre conteúdos através do uso de abas, sendo elas: superior (padrão), direita, base, e esquerda.</p>
+    <p>Mudar entre esses estilos é fácil, e requer pouca alteração de código.</p>
+    <hr>
+    <h4>Fade nas abas</h4>
+    <p>Para utilizar fade in, adicione <code>.fade</code> para cada <code>.tab-pane</code>.</p>
+    <hr>
+    <h4>Requerimentos plugin jQuery</h4>
+    <p>Todas as abas são alimentadas pelo plugin jQuery. Leia mais sobre como trazer abas a vida<a href="#/javascript.html#tabs"> na página de documentação javascript (inglês) </a>.</p>
+    <p><a class="btn" href="#/javascript.html#tabs">Ver o javascript &rarr;</a></p>
+  </div>
+  <div class="col-md-8">
+    <h3>Exemplo de Abas</h3>
+    <p>Para fazer as abas, crie um <code>.tab-pane</code> com um ID único para toda aba e envolvida com <code>.tab-content</code>.</p>
+    
+
+    <tabset style="padding-bottom: 18px; border-bottom: 1px solid #ddd;">
+      <tab heading="Seção 1">Estou na Seção 1.</tab>
+      <tab heading="Seção 2">Agora estou na Seção 2.</tab>
+      <tab heading="Seção 3">E claro, por último estou na Seção 3.</tab>
+    </tabset>
+    <hr>
+
+
+    <p>Para a direita ou esquerda abas alinhados, envolver o <code>.nav-tabs</code> e o <code>.tab-content</code> em <code>.tabbable</code>.</p>
+
+    <h3>Marcação Simples</h3>
+    <p>Usando abas exige uma div, um conjunto de abas, e um conjunto de painéis de abas de conteúdo.</p>
+    
+    <pre class="brush: jscript">
+    &lt;div class="tabbable"&gt; &lt;!-- Only required for left/right tabs --&gt;
+      &lt;ul class="nav nav-tabs"&gt;
+        &lt;li class="active"&gt;&lt;a href="#tab1" data-toggle="tab"&gt;Section 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#tab2" data-toggle="tab"&gt;Section 2&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;div class="tab-content"&gt;
+        &lt;div class="tab-pane active" id="tab1"&gt;
+          &lt;p&gt;I'm in Section 1.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="tab-pane" id="tab2"&gt;
+          &lt;p&gt;Howdy, I'm in Section 2.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+
+
+  </div>
+</div>
+
+
+</section>
+

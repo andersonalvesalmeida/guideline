@@ -1,0 +1,478 @@
+<style>
+    .well form,
+    .well form div.form-group:last-child {
+        margin-bottom: 0px;
+    }
+    .search-query {
+        margin-right: 5px;
+    }
+</style>
+
+<section>
+    <h4>Referências</h4>
+    <p>
+        <ul>
+            <li>
+                <a href="http://getbootstrap.com/css/#forms">http://getbootstrap.com/css/#forms</a>
+            </li>
+        </ul>
+    </p>
+
+    <h2>Tipos de formulários</h2>
+    <p>Nossa biblioteca possui 4 tipos diferentes de organização de formulários.</p>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th width="120px">Nome</th>
+                <th width="140px">Classe</th>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Vertical (default)</th>
+                <td><code>.form</code></td>
+                <td>O rótulo do campo fica acima do controle, sempre alinhado à esquerda. É o formato padrão de formulários que vão dentro de janelas modais e espaços reduzidos.</td>
+            </tr>
+            <tr>
+                <th>Inline</th>
+                <td><code>.form-inline</code></td>
+                <td>Rótulo e controle ficam na mesma linha, alinhados à esquerda.</td>
+            </tr>
+            <tr>
+                <th>Busca</th>
+                <td><code>.form-inline</code></td>
+                <td>Formulário que já vem com um padrão estético de um campo de busca</td>
+            </tr>
+            <tr>
+                <th>Horizontal</th>
+                <td><code>.form-horizontal</code></td>
+                <td>labels com <em>float right</em> alinhados à direita, na mesma linha dos controles.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Exemplos de formulários</h2>
+    <h3>Formulário vertical</h3>
+    
+    <div class="col-md-6">
+        <div class="well">
+            <form class="form">
+                <fieldset>
+                    <div class="form-group">
+                        <label for="field1_input">Nome</label>
+                        <div class="controls">
+                            <input type="text" class="form-control" id="field1_input" name="field1" placeholder="Informe seu nome"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="field1_input">E-mail</label>
+                        <div class="controls">
+                            <div class="input-prepend input-append">
+                                <span class="add-on"><i class="icon-envelope"></i></span>
+                                <input type="text" class="form-control" id="field1_input" name="field1" placeholder="Informe seu email"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="field1_input">Percentual <span class="add-on">%</span></label>
+                        <div class="controls">
+                            <div class="input-prepend input-append">
+                                <input type="text" class="form-control" mask="999,99"  id="field1_input" name="field1" placeholder="Informe o percentual"/>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        <h4>Utilizar em janelas modais</h4>
+        <p>Para formulários inseridos em janelas modais, devemos utilizar a classe <code>.form-vertical</code>. Utilizando essa classe os campos do formulários ficam dispostos verticalmente. Veja um exemplo clicando no botão abaixo:</p>
+
+    </div> 
+    <div class="col-md-6">
+        <pre class="brush: Xml">
+            &lt;form class="form"&gt;
+                &lt;fieldset&gt;
+                    &lt;div class="form-group"&gt;
+                        &lt;label for="field1_input"&gt;Nome&lt;/label&gt;
+                        &lt;div class="controls"&gt;
+                            &lt;input type="text" class="form-control" id="field1_input" name="field1" placeholder="Informe seu nome"/&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="form-group"&gt;
+                        &lt;label for="field1_input"&gt;E-mail&lt;/label&gt;
+                        &lt;div class="controls"&gt;
+                            &lt;div class="input-prepend input-append"&gt;
+                                &lt;span class="add-on"&gt;&lt;i class="icon-envelope"&gt;&lt;/i&gt;&lt;/span&gt;
+                                &lt;input type="text" class="form-control" id="field1_input" name="field1" placeholder="Informe seu email"/&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="form-group"&gt;
+                        &lt;label for="field1_input"&gt;Percentual &lt;span class="add-on"&gt;%&lt;/span&gt;&lt;/label&gt;
+                        &lt;div class="controls"&gt;
+                            &lt;div class="input-prepend input-append"&gt;
+                                &lt;input type="text" class="form-control" mask="999,99"  id="field1_input" name="field1" placeholder="Informe o percentual"/&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/fieldset&gt;
+            &lt;/form&gt;
+        </pre>    
+    </div>
+    
+    <h3>Formulário horizontal</h3>
+    <div class="col-md-6">
+      <div class="well">
+          <form class="form-horizontal">
+              <fieldset>
+                  <div class="form-group">
+                      <label for="field1_input" class="col-sm-2 control-label">Nome</label>
+                      <div class="col-sm-10">
+                          <input type="text" class="form-control" id="field1_input" name="field1" placeholder="Informe seu nome"/>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="field1_input" class="col-sm-2 control-label">E-mail</label>
+                      <div class="col-sm-10">
+                          <div class="input-prepend input-append">
+                              <span class="add-on"><i class="icon-envelope"></i></span>
+                              <input type="text" class="form-control" id="field1_input" name="field1" placeholder="Informe seu email"/>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="field1_input" class="col-sm-2 control-label">Percentual <span class="add-on">%</span></label>
+                      <div class="col-sm-10">
+                          <div class="input-prepend input-append">
+                              <input type="text" class="form-control" mask="999,99"  id="field1_input" name="field1" placeholder="Informe o percentual"/>
+                          </div>
+                      </div>
+                  </div>
+              </fieldset>
+          </form>
+      </div>
+
+      <h3>Utilizar em páginas</h3>
+      <p>Para formulários utilizados diretamente na página, sem utilização de componentes como janelas modais, utilize a classe <code>.form-horizontal</code>. Utilizando essa classe os campos do formulário foram dispostos com o seu <code>label</code> posicionado do lado esquerdo, enquanto o campo fica posicionado ao lado direito. Veja um exemplo abaixo:</p>
+
+    </div>
+    <div class="col-md-6">
+        <pre class="brush: Xml">
+            &lt;form class="form-horizontal"&gt;
+              &lt;fieldset&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="field1_input" class="col-sm-2 control-label"&gt;Nome&lt;/label&gt;
+                  &lt;div class="col-sm-10"&gt;
+                    &lt;input type="text" class="form-control" id="field1_input" name="field1" placeholder="Informe seu nome"/&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="field1_input" class="col-sm-2 control-label"&gt;E-mail&lt;/label&gt;
+                  &lt;div class="col-sm-10"&gt;
+                    &lt;div class="input-prepend input-append"&gt;
+                      &lt;span class="add-on"&gt;&lt;i class="icon-envelope"&gt;&lt;/i&gt;&lt;/span&gt;
+                      &lt;input type="text" class="form-control" id="field1_input" name="field1" placeholder="Informe seu email"/&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="field1_input" class="col-sm-2 control-label"&gt;Percentual &lt;span class="add-on"&gt;%&lt;/span&gt;&lt;/label&gt;
+                  &lt;div class="col-sm-10"&gt;
+                    &lt;div class="input-prepend input-append"&gt;
+                      &lt;input type="text" class="form-control" mask="999,99"  id="field1_input" name="field1" placeholder="Informe o percentual"/&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/fieldset&gt;
+            &lt;/form&gt;
+        </pre>    
+    </div>
+    
+    <h3>Formulário inline</h3>
+    <div class="col-md-12">
+      
+      <div class="well">
+        <form class="form-inline" role="form">
+          <div class="form-group">
+            <label class="sr-only" for="nome">Nome</label>
+            <input type="text" class="form-control" id="nome" placeholder="Informe o nome">
+          </div>
+          <div class="form-group">
+            <label class="sr-only" for="email">Email</label>
+            <div class="input-group">
+              <div class="input-group-addon">@</div>
+              <input class="form-control" type="email" placeholder="Informe o email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="sr-only" for="senha">Senha</label>
+            <input type="password" class="form-control" id="senha" placeholder="Senha">
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> Ativo
+            </label>
+          </div>
+          <button type="submit" class="btn btn-default">Enviar</button>
+        </form>
+      </div>
+    
+
+      <div class="well">
+        <form class="form-inline">
+            <select class="form-control">
+                <option value="" selected="selected" disabled="disabled">Sessão</option>
+                <option value="hurr">Sessão 1</option>
+                <option value="hurr">Sessão 2</option>
+                <option value="hurr">Sessão 3</option>
+                <option value="hurr">Sessão 4</option>
+            </select>
+            <select class="form-control">
+                <option value="" selected="selected" disabled="disabled">Visilidade</option>
+                <option value="hurr">Visível</option>
+                <option value="hurr">Oculto</option>
+                <option value="hurr">Ambos</option>
+            </select>
+            <button type="submit" class="btn btn-secondary btn-small">Filtrar</button>
+        </form>
+      </div>
+
+      <h4>Utilizar em formulários de filtro</h4>
+      <p>Esse tipo de formulário é inserido utilizando a classe <code>form-inline</code>. Utilizando essa classe os campos do formulário são dispostos horizontalmente. Utilize esse tipo de organização em formulários de filtros, conforme o exemplo abaixo:</p>
+
+    </div>
+
+    <div class="col-md-12">
+        <pre class="brush: Xml">
+          &lt;form class="form-inline" role="form"&gt;
+              &lt;div class="form-group"&gt;
+                &lt;label class="sr-only" for="nome"&gt;Nome&lt;/label&gt;
+                &lt;input type="text" class="form-control" id="nome" placeholder="Informe o nome"&gt;
+              &lt;/div&gt;
+              &lt;div class="form-group"&gt;
+                &lt;label class="sr-only" for="email"&gt;Email&lt;/label&gt;
+                &lt;div class="input-group"&gt;
+                  &lt;div class="input-group-addon"&gt;@&lt;/div&gt;
+                  &lt;input class="form-control" type="email" placeholder="Informe o email"&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class="form-group"&gt;
+                &lt;label class="sr-only" for="senha"&gt;Senha&lt;/label&gt;
+                &lt;input type="password" class="form-control" id="senha" placeholder="Senha"&gt;
+              &lt;/div&gt;
+              &lt;div class="checkbox"&gt;
+                &lt;label&gt;
+                  &lt;input type="checkbox"&gt; Ativo
+                &lt;/label&gt;
+              &lt;/div&gt;
+              &lt;button type="submit" class="btn btn-default"&gt;Enviar&lt;/button&gt;
+            &lt;/form&gt;
+        </pre>    
+    </div>
+
+    <h3>Formulário de busca</h3>
+    <div class="col-md-6">
+        <div class="well">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label class="sr-only" for="nome">Nome</label>
+                    <input type="search" class="form-control" id="nome" placeholder="Informe o nome">
+                </div>
+                <button type="submit" class="btn btn-default">Buscar</button>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <pre class="brush: Xml">
+          &lt;form class="form-inline"&gt;
+                &lt;div class="form-group"&gt;
+                    &lt;label class="sr-only" for="nome"&gt;Nome&lt;/label&gt;
+                    &lt;input type="search" class="form-control" id="nome" placeholder="Informe o nome"&gt;
+                &lt;/div&gt;
+                &lt;button type="submit" class="btn btn-default"&gt;Buscar&lt;/button&gt;
+            &lt;/form&gt;
+        </pre>    
+    </div>
+
+
+    
+    
+
+
+    <h2>Tipos de campos</h2>
+    <h3>Tipos básicos</h3>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th width="120px">Nome</th>
+                <th width="220px" class="hidden-phone">Tipo</th>
+                <th>Aparência</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Texto</th>
+                <td class="hidden-phone"><code>type="text"</code></td>
+                <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+                <th>Checkbox</th>
+                <td class="hidden-phone"><code>type="checkbox"</code></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <th>Radio</th>
+                <td class="hidden-phone"><code>type="radio"</code></td>
+                <td><input type="radio"></td>
+            </tr>
+            <tr>
+                <th>Select</th>
+                <td class="hidden-phone"><code>select</code></td>
+                <td><select></select></td>
+            </tr>
+            <tr>
+                <th>Select List</th>
+                <td class="hidden-phone"><code>select multiple="multiple"</code></td>
+                <td><select multiple></select></td>
+            </tr>
+            <tr>
+                <th>File</th>
+                <td class="hidden-phone"><code>type="file"</code></td>
+                <td><input type="file"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Campos especiais</h3>
+    <p>Os campos especiais possuem funcionalidades adicionais aos tipos básicos.</p>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th width="150px">Nome</th>
+                <th width="320px" class="hidden-phone">Tipo</th>
+                <th>Aparência</th>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Date <a href="">Docs</a></th>
+                <td class="hidden-phone"><code>type="text" datepicker mask="date"</code></td>
+                <td><input type="text" mask="date" class="form-control" value="19/07/2012"></td>
+                <td>Ao focar o campo, exibe um calendário para a seleção de uma data para preenchimento do texto.</td>
+            </tr>
+            <tr>
+                <th>Máscara <a href="">Docs</a></th>
+                <td class="hidden-phone"><code>type="text" mask="decimal"</code></td>
+                <td>
+                    <div class="input-prepend input-append">
+                        <span class="add-on">R$</span>
+                        <input type="text" mask="decimal" class="form-control" value="12312312">
+                    </div>
+                </td>
+                <td>Garante que o campo será preenchido com uma formatação específica.</td>
+            </tr>
+            <tr>
+                <th>Chosen <a href="">Docs</a></th>
+                <td class="hidden-phone"><code>select chosen</code></td>
+                <td><select chosen data-placeholder="Selecione" data-chosen-no-results-text="Nenhum resultado encontrado para: ">
+                        <option></option>
+                        <option>Opção 1</option>
+                        <option>Opção 2</option>
+                        <option>Opção 3</option>
+                        <option>Opção 4</option>
+                    </select>
+                </td>
+                <td>Incrementa ao funcionamento padrão do select um campo de texto para facilitar a busca de uma opção específica.</td>
+            </tr>
+            <tr>
+                <th>Chosen Multiplo <a href="">Docs</a></th>
+                <td class="hidden-phone"><code>select multiple="true" chosen</code></td>
+                <td><select multiple="true" chosen data-placeholder="Selecione" data-chosen-no-results-text="Nenhum resultado encontrado para: ">
+                        <option>Opção 1</option>
+                        <option>Opção 2</option>
+                        <option>Opção 3</option>
+                        <option>Opção 4</option>
+                    </select>
+                </td>
+                <td>Exibe listas de seleção multiplas em formato de chosen.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Estados</h3>
+    <form class="form-horizontal">
+        <fieldset>
+            <div class="form-group">
+                <label for="focusedInput">Input com foco</label>
+                <div class="controls">
+                    <input class="form-control" id="focusedInput" type="text" value="Input com foco…"></div>
+            </div>
+            <div class="form-group">
+                <label>Input não editavel</label>
+                <div class="controls">
+                    <span class="input-xlarge form-control" readonly>Algum valor aqui</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="disabledInput">Input desabilitado</label>
+                <div class="controls">
+                    <input class="input-xlarge disabled form-control" id="disabledInput" type="text" placeholder="Input desabilitado…" disabled=""></div>
+            </div>
+            <div class="form-group">
+                <label for="optionsCheckbox2">Checkbox desabilitado</label>
+                <div class="controls">
+                    <label class="checkbox">
+                        <input type="checkbox" id="optionsCheckbox2" value="option1" disabled="">Esse é um checkbox desabilitado</label>
+                </div>
+            </div>
+            <div class="form-group has-warning">
+                <label for="inputWarning">Input com "warning"</label>
+                <div class="controls">
+                    <input type="text" id="inputWarning" class="form-control">
+                    <span class="help-inline">Alguma coisa deve ter dado errado</span>
+                </div>
+            </div>
+            <div class="form-group has-error">
+                <label for="inputError">Input com "error"</label>
+                <div class="controls">
+                    <input type="text" id="inputError" class="form-control">
+                    <span class="help-inline">Por favor corrija o erro</span>
+                </div>
+            </div>
+            <div class="form-group has-success">
+                <label for="inputSuccess">Input com "success"</label>
+                <div class="controls">
+                    <input type="text" id="inputSuccess" class="form-control">
+                    <span class="help-inline">Eba!</span>
+                </div>
+            </div>
+            <div class="form-group has-success">
+                <label for="selectError">Select com "success"</label>
+                <div class="controls">
+                    <select id="selectError" class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    <span class="help-inline">Eba!</span>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</section>
+
+<style>
+#focusedInput {
+    border-color: #ccc;
+    border-color: rgba(82,168,236,.8);
+    outline: 0;
+    outline: thin dotted \9;
+    -webkit-box-shadow: 0 0 8px rgba(82,168,236,.6);
+    box-shadow: 0 0 8px rgba(82,168,236,.6);
+}
+</style>

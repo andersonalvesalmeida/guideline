@@ -1,0 +1,256 @@
+<section>
+    <h4>Referências</h4>
+    <p>
+        <ul>
+            <li>
+                <a href="http://getbootstrap.com/css/#tables">http://getbootstrap.com/css/#tables</a>
+            </li>
+        </ul>
+    </p>
+    <section id="tables">
+        <h2>Marcação</h2>
+        <div class="row">
+            <div class="col-md-8">
+                <table class="table table-bordered table-striped">
+                    
+                    <thead>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Descrição</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <code>&lt;table&gt;</code>
+                            </td>
+                            <td>Container principal que representa a tabela</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>&lt;thead&gt;</code>
+                            </td>
+                            <td>Elemento que contêm as linhas de cabeçalho da tabela</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>&lt;tbody&gt;</code>
+                            </td>
+                            <td>Elemento que contêm as linhas com os dados da tabela</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>&lt;tr&gt;</code>
+                            </td>
+                            <td>Elemento que contêm as celulas da tabela</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>&lt;td&gt;</code>
+                            </td>
+                            <td>Celula</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>&lt;th&gt;</code>
+                            </td>
+                            <td>Celula especial para a descrever a coluna de uma linha.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>&lt;caption&gt;</code>
+                            </td>
+                            <td>
+                                Descrição da informação que a tabela contêm. Essa informação é útil para leitores de tela, onde descreve ao usuário com uma entonação direfente, qual é o conteúdo que será lido em seguida, como uma introdução.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-4">
+                <pre class="brush: jscript">
+                    &lt;table&gt;
+                        &lt;thead&gt;
+                            &lt;tr&gt;
+                                &lt;th&gt;...&lt;/th&gt;
+                                &lt;th&gt;...&lt;/th&gt;
+                            &lt;/tr&gt;
+                        &lt;/thead&gt;
+                        &lt;tbody&gt;
+                            &lt;tr&gt;
+                                &lt;th&gt;...&lt;/th&gt;
+                                &lt;th&gt;...&lt;/th&gt;
+                            &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                        &lt;tfoot&gt;
+                            &lt;tr&gt;
+                                &lt;th&gt;...&lt;/th&gt;
+                                &lt;th&gt;...&lt;/th&gt;
+                            &lt;/tr&gt;
+                        &lt;/tfoot&gt;
+                    &lt;/table&gt;
+                </pre>
+            </div>
+        </div>
+
+        <h2>Opções</h2>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Classe CSS</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Padrão</td>
+                    <td class="muted">Nenhuma</td>
+                    <td>Sem estilos, apenas colunas e linhas</td>
+                </tr>
+                <tr>
+                    <td>Basica</td>
+                    <td>
+                        <code>.table</code>
+                    </td>
+                    <td>Apenas linhas horizontais para separar o conteúdo</td>
+                </tr>
+                <tr>
+                    <td>Com borda</td>
+                    <td>
+                        <code>.table-bordered</code>
+                    </td>
+                    <td>Bordas arredondadas e borda para fechar a tabela</td>
+                </tr>
+                <tr>
+                    <td>Zebra</td>
+                    <td>
+                        <code>.table-striped</code>
+                    </td>
+                    <td>
+                        Intercala as cores de fundo das linhas entre branco e cinza claro para acilitar a visualização
+                    </td>
+                </tr>
+                <tr>
+                    <td>Condensada</td>
+                    <td>
+                        <code>.table-condensed</code>
+                    </td>
+                    <td>
+                        Corta o espaçamento da tabela pela metade em todas as celulas.
+                        <br>
+                        Ótimo para tabelas
+                        com muito conteúdo que devem ficar acima da barra de rolagem e economizar espaço.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Aplicação da Guideline</h2>
+        <h3>Estilo de tabela padrão</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <p>
+                    As tabelas nas aplicações devem receber as classes <code>.table</code>, <code>.table-bordered</code> e a classe <code>.table-striped</code>.
+                </p>
+				<p>Seguir o exemplo ao lado para Nomes (Textos), a esquerda, Datas e Números centralizados, e Valores a direita.</p>
+                <p>Para responder a uma heuristica sobre uso de elementos visuais, será utilizado link para edição nas tabelas. Como pode ver no exemplo ao lado na coluna NOME.
+                Tais links serão no nome principal do objeto, como no caso de perfil de usuário, será no nome do usuário.
+                A localização da coluna principal de edição será decidido pelos profissionais de UX.</p>            
+            </div>
+            <div class="col-md-8">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th class="text-center">#</th>
+                            <th>Nome</th>
+                            <th class="text-center">Data</th>
+                            <th class="text-right">Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">1</td>
+                            <td><a href="#">João</a></td>
+                            <td class="text-center">20/02/2012</td>
+                            <td class="text-right">R$ 20,00</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">2</td>
+                            <td><a href="#">Maria</a></td>
+                            <td class="text-center">20/02/2012</td>
+                            <td class="text-right">R$ 33,50</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">3</td>
+                            <td><a href="#">José</a></td>
+                            <td class="text-center">20/02/2012</td>
+                            <td class="text-right">R$ 89,10</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="3" class="text-right">Total</th>
+                            <td class="text-right">R$ 142,60</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+
+        <hr class="soften">
+
+        <h2>Heurísticas do uso de tabelas</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="well">
+                    <h4>Cabeçalhos</h4>
+                    <p>Todo o cabeçalho das tabelas por padrão estarão em caixa alta, indiferente do texto inserido estar ou não, isso já é um padrão aplicado (implementado no CSS).</p>
+
+                    <h4>Explique do que a tabela se trata</h4>
+                    <p>Dê a tabela um título descritivo. Mostre o título da tabela acima do header, alinhado à esquerda.</p>
+
+                    <h4>Reduza e comprima as informações</h4>
+                    <p>Mostre apenas as informações que o usuário realmente necessita, mas coloque formas de enxergar os detalhes. Overlays, inlays e tooltips ajudam o usuário a ficar na página e manter a fluidez da navegação, resuma as informações sempre que necessário.</p>
+                    <p>O nível de precisão dos dados numéricos devem ter uma precisão de acordo com as necessidades do usuário. Quanto menos decimais, mais rápido o usuário lê e assimila a informação.</p>
+
+                    <h4>Tabelas com muitos dados</h4>
+                    <p>Quando a quantidade de informação disposta na tela for grande e complexa usar:
+                    <ul>
+                        <li>Paginação</li>
+                        <li>Sorting</li>
+                        <li>Busca</li>
+                    </ul>
+                    <p>Utilizar o campo de busca sempre que houver paginação na tabela.</p>
+
+                    <p>Para facilitar a implementação pode-se usar o componente <a href="#/datatables">Datatables</a></p>
+
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="well">
+                    <h4>Não use elementos visuais excessivamente</h4>
+                    <p>
+                        Sempre que possível evite o uso excessivo de elementos visuais.
+                        Os dados da tabela devem ter mais destaque visual que sua estrutura.
+                        Use cores leves, bordas finas. Evite sempre que possível o uso de uma coluna de "ações" com ícones e links (Ex.: Ver detalhes, editar, remover). O acesso ao detalhe das informações pode ser acessado ao clicar em uma coluna já existente (Ex.: Nome do usuário).
+                    </p>
+
+                    <h4>Destaque a informação mais importante</h4>
+                    <p>Usando algum estilo diferente (<a href="#">link</a>, negrito, cores ou sublinhado) devemos destacar visualmente a informação mais relevante entre todas as colunas. Evite o uso excessivo de destaques. Ao enfatizar muitas coisas você não acaba enfatizando nada.</p>
+
+                    <h4>Alinhamento</h4>
+                    <ul>
+                        <li>Textos: Alinhas a <strong>esquerda</strong>. <br />
+                            Utilize a classe <code>.text-left</code></li>
+                        <li>Números: Alinhar à <strong>direita</strong>, para facilitar a comparação e soma dos valores.<br />
+                            Utilize a classe <code>.text-right</code></li>
+                        <li>Datas, <span>horas e números de ordenação</span>: Alinhar ao <strong>centro</strong>.<br />
+                            Utilize a classe <code>.text-center</code></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

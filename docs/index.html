@@ -1,0 +1,94 @@
+﻿<html>
+<head>
+	<title>Guideline</title>
+	<!-- <link rel="stylesheet" href="http://guide-eicon-com-br.s3-website-sa-east-1.amazonaws.com/1.0.0/files/css/guideline.css"> -->
+  <link rel="stylesheet" href="../guideline/css/guideline.css">
+	<link rel="stylesheet" href="style.css">
+
+	<!-- syntaxhighlighter_3.0.83 - http://alexgorbatchev.com/SyntaxHighlighter/manual/installation.html-->
+	<script type="text/javascript" src="vendor/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+	<!--
+	    At least one brush, here we choose JS. You need to include a brush for every 
+	    language you want to highlight
+	-->
+	<script type="text/javascript" src="vendor/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+	<script type="text/javascript" src="vendor/syntaxhighlighter_3.0.83/scripts/shBrushColdFusion.js"></script>
+	 
+	<!-- Include *at least* the core style and default theme -->
+	<link href="vendor/syntaxhighlighter_3.0.83/styles/shCore.css" rel="stylesheet" type="text/css" />
+	<link href="vendor/syntaxhighlighter_3.0.83/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body ng-controller="GuidelineCtrl">
+
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Guideline</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li ng-repeat="menu in mainMenu" ng-class="{'active' : menu==selectedMainMenu}">
+            	<a href="" ng-click="setMainMenuSelect($index)">{{menu}}</a>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Buscar...">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar" >
+            <li ng-repeat="menu in sidebarMenu" ng-class="{'active' : menu.nome==selectedMenu.nome}">
+            	<a href="#/{{menu.view}}">{{menu.nome}}</a>
+            </li>
+          </ul>
+        </div>
+        
+        
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+        	<h1 class="page-header" >{{selectedMenu.descricao}}</h1>
+
+        	<ng-view></ng-view>
+
+        </div>
+      </div>
+    </div>
+
+	<script src="../guideline/js/guideline.min.js"></script>
+	
+
+	<!-- Angular -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.4/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.4/angular-resource.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.4/angular-route.min.js"></script>
+
+  <!-- Angular UI Bootstrap -->
+  <script src="vendor/ui-bootstrap-tpls-0.11.2.min.js"></script>
+  <!-- 
+   <script src="vendor/ui-bootstrap-0.11.2.mim.js"></script>
+   -->
+
+
+	<!-- app -->
+	<script src="scripts/controllers.js"></script>
+	<script src="scripts/app.js"></script>
+
+	<script type="text/javascript">
+	     SyntaxHighlighter.all()
+	</script>
+</body>
+</html>

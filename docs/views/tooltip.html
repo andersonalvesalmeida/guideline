@@ -1,0 +1,39 @@
+<section>
+	<h4>Referências</h4>
+    <p>
+        <ul>
+            <li>
+                <a href="http://getbootstrap.com/javascript/#tooltips">http://getbootstrap.com/javascript/#tooltips</a>
+            </li>
+        </ul>
+    </p>
+	<p>
+		Tem como objetivo esclarecer a informação pertinente a uma interação ou conteudo.Se molda na maioria dos casos como legenda da interface.
+	</p>
+	<div class="row">
+    	<div class="col-md-6">
+	      <h3>Utilização</h3>
+	      	<ul>
+	      		<li>O elemento que irá conter o tooltip deverá conter o atributo <code>data-toggle="tooltip"</code> e um <code>title="Texto aqui"</code>.</li>
+	      		<li>Os demais atributos como animação, orientação e etc, podem ser informados atravez de Javascript ou data-attributes no HTML</li>
+	      		<li>Por padrão, o tooltip possui orientação TOP, podendo ser alterada com o atributo <code>data-placement="top|bottom|left|right"</code></li>
+	      	</ul>
+      		
+	      
+	    </div>
+	    <div class="col-md-6">
+	      	<h3>Exemplo</h3>
+			<pre class="prettyprint">
+			&lt;a id="tooltip" href="#" data-toggle="tooltip" data-placement="top" title="Eu sou um exemplo!"&gt;	
+			  Demonstração
+			&lt;/a&gt;
+			</pre>	
+			
+	 		<input type="text" value="Clique aqui!" tooltip="See? Now click away..."  tooltip-trigger="focus" tooltip-placement="top" class="form-control" style="margin: 35px 0;" />
+	 		<p>
+	 			<a href="" title="Eu sou um exemplo!" tooltip-html-unsafe="{{htmlTooltip}}">Demonstração</a>
+	 		</p>
+		</div> 
+  </div>
+  
+</section>
