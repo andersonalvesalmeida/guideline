@@ -336,7 +336,7 @@
     };
 
     $.fn.filestyle.defaults = {
-        'buttonText': 'Choose file',
+        'buttonText': 'Escolher arquivo',
         'iconName': 'glyphicon-folder-open',
         'buttonName': 'btn-default',
         'size': 'nr',

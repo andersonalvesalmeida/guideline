@@ -41,7 +41,7 @@ module.exports = function(grunt) {
                 overwrite: true,                        // overwrite matched source files
                 replacements: [{
                     from: 'bootstrap/',
-                    to: 'fonts/'
+                    to: '../fonts/'
                 }]
             }
         },
@@ -98,6 +98,7 @@ module.exports = function(grunt) {
                   './bower_components/datatables/media/js/jquery.dataTables.js',
                   './bower_components/datatables-tabletools/js/dataTables.tableTools.js',
                   './assets/js/dataTables.bootstrap.js',
+                  './bower_components/moment/moment.js',
 				  './assets/js/script.js'
 				],
 				dest: './guideline/js/guideline.js',

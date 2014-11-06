@@ -1,27 +1,58 @@
-(function(){
-	
-	//Personalizar inputs type file
-	$(':file').filestyle({buttonName: 'btn-default'});
+    function pad(str, max) {
+		  return str.length < max ? pad("0" + str, max) : str;
+		}
+		
+		function formatCurrency(content){
+			content=content.replace(/\D/g,""); //Remove tudo o que não é dígito
+      content=content.replace(/^([0-9]{3}\.?){3}-[0-9]{2}$/,"$1.$2");
+      content=content.replace(/(\d)(\d{2})$/,"$1,$2"); //Coloca ponto antes dos 2 últimos digitos
+      return content;
+    };
 
-	//Criar datapickers
-	$('.datepicker').datepicker({
-	    format: 'dd/mm/yyyy',
-	    todayBtn: true,
-	    language: 'pt-BR',
-	    autoclose: true,
-	    todayHighlight: true
-	});
+    function formatCpfCnpj(content){
+			if(content.length > 11){
+				return formatCnpj(content);
+			}else{
+				return formatCPf(content);
+			}
+    };
 
-	//gerenciar notificações
+    function formatCPf(content){
+    	content = pad(content, 11);
+			content=content.replace(/\D/g,"");
+      content=content.replace(/(\d{3})(\d)/,"$1.$2");
+      content=content.replace(/(\d{3})(\d)/,"$1.$2");
+      content=content.replace(/(\d{3})(\d{1,2})$/,"$1-$2");
+      return content;
+    };
+
+    function formatCnpj(content){
+    	content = pad(content, 14);
+      content=content.replace(/\D/g,"");                              
+      content=content.replace(/^(\d{2})(\d)/,"$1.$2");    
+      content=content.replace(/^(\d{2})\.(\d{3})(\d)/,"$1.$2.$3");
+      content=content.replace(/\.(\d{3})(\d)/,".$1/$2");              
+      content=content.replace(/(\d{4})(\d)/,"$1-$2");
+      return content;
+    };
+
+    //gerenciar notificações
 	/*
 	* Generate a new nitification, types: alert, information, error, warning, notification, success
 	*/
-	function generate(type, text) {
+	function notificar(type, text) {
         var timeout = 5000;
-        var modal = false
+        var modal = false;
+        var closeWith = false;
         if(type === 'error'){
         	timeout = false;
         	modal = true;
+        	closeWith = ['button'];
+        }
+        if(type === 'information'){
+        	timeout = false;
+        	modal = true;
+        	closeWith = false;
         }
         var n = noty({
             text        : text,
@@ -30,8 +61,8 @@
             layout      : 'topCenter',
             theme       : 'bootstrapTheme',
             timeout 	: timeout,
-            closeWith	: ['button'],
             modal		: modal,
+            closeWith 	: closeWith,
             animation: {
 		        open: {height: 'toggle'},
 		        close: {height: 'toggle'},
@@ -42,12 +73,30 @@
         return n;
     }
 
-   	//var error = generate('error', 'Um erro ocorreu');
+(function(){
+	
+	//Personalizar inputs type file que não permitem uploads multiplos.
+	$(':file').each(function(){
+	    if(typeof($(this).attr('multiple')) === 'undefined' ){
+	        $(this).filestyle({buttonName: 'btn-default'});
+	    }
+	});
+
+	//Criar datapickers
+	$('.datepicker').datepicker({
+	    format: 'dd/mm/yyyy',
+	    todayBtn: true,
+	    language: 'pt-BR',
+	    autoclose: true,
+	    todayHighlight: true
+	});
+
+   	//var error = notificar('error', 'Um erro ocorreu');
 
    	$('.notify').each(function(e){
    		var type = $(this).data('type');
    		var text = $(this).html();
-   		generate(type, text);
+   		notificar(type, text);
    	});
    	
    	
@@ -113,7 +162,7 @@
                 "pdf",
                 {"sExtends":"print", "sButtonText": "Imprimir"}
             ],
-            "sSwfPath": "guideline/swf/copy_csv_xls_pdf.swf"
+            "sSwfPath": "http://guide-eicon-com-br.s3-website-sa-east-1.amazonaws.com/1.0.0/files/swf/copy_csv_xls_pdf.swf"
         });
     
         $( tt.fnContainer() ).insertBefore('div.dataTables_wrapper');
