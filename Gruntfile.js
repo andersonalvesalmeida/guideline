@@ -99,8 +99,8 @@ module.exports = function(grunt) {
                   './bower_components/datatables-tabletools/js/dataTables.tableTools.js',
                   './assets/js/dataTables.bootstrap.js',
                   './bower_components/moment/moment.js',
-                  './bower_components/numeral/languages/pt-br.js',
                   './bower_components/numeral/numeral.js',
+                  './bower_components/numeral/languages/pt-br.js',
 				  './assets/js/script.js'
 				],
 				dest: './guideline/js/guideline.js',
