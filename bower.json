@@ -27,7 +27,8 @@
     "datatables-tabletools": "https://github.com/DataTables/TableTools.git#~2.2.2",
     "blueimp-file-upload": "https://github.com/blueimp/jQuery-File-Upload.git#~9.7.1",
     "moment": "~2.8.3",
-    "numeral": "https://github.com/adamwdraper/Numeral-js.git#~1.5.3"
+    "numeral": "https://github.com/adamwdraper/Numeral-js.git#~1.5.3",
+    "chartjs": "~0.2.0"
   },
   "resolutions": {
     "bootstrap-sass": "~3.3.1"
