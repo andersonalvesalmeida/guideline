@@ -24,7 +24,6 @@
     "noty": "https://github.com/needim/noty.git#~2.2.6",
     "bootstrap-filestyle": "https://github.com/markusslima/bootstrap-filestyle.git#~1.1.0",
     "datatables": "https://github.com/DataTables/DataTables.git#~1.10.2",
-    "datatables-tabletools": "https://github.com/DataTables/TableTools.git#~2.2.2",
     "blueimp-file-upload": "https://github.com/blueimp/jQuery-File-Upload.git#~9.7.1",
     "moment": "~2.8.3",
     "numeral": "https://github.com/adamwdraper/Numeral-js.git#~1.5.3",
