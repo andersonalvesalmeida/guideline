@@ -23,7 +23,3 @@ assets:
     datepicker style - http://bootstrap-datepicker.readthedocs.org/en/release/
     Notity - http://ned.im/noty/
     bootstrap file upload style - http://markusslima.github.io/bootstrap-filestyle
-    
-    
-    
-    teste
