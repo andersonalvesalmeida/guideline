@@ -89,7 +89,7 @@ module.exports = function(grunt) {
 			javascript: {
 				src: [
 				  './bower_components/jquery/dist/jquery.js',
-                  './bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap.js',
+                  './bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
                   './bower_components/bootstrap-sass-datepicker/js/bootstrap-sass-datepicker.js',
                   './bower_components/bootstrap-sass-datepicker/js/locales/bootstrap-datepicker.pt-BR.js',
                   './bower_components/noty/js/noty/packaged/jquery.noty.packaged.js',
@@ -99,6 +99,7 @@ module.exports = function(grunt) {
                   './bower_components/datatables-tabletools/js/dataTables.tableTools.js',
                   './assets/js/dataTables.bootstrap.js',
                   './bower_components/moment/moment.js',
+                  './bower_components/moment/locale/pt-br.js',
                   './bower_components/numeral/numeral.js',
                   './bower_components/numeral/languages/pt-br.js',
 				  './assets/js/script.js'

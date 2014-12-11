@@ -70,13 +70,15 @@
       return content
     }
 
-    /*Função que padroniza valor monétario*/
-		function formatCurrency(content){
-			content=content.replace(/\D/g,""); //Remove tudo o que não é dígito
-      content=content.replace(/^([0-9]{3}\.?){3}-[0-9]{2}$/,"$1.$2");
-      content=content.replace(/(\d)(\d{2})$/,"$1,$2"); //Coloca ponto antes dos 2 últimos digitos
-      return content;
-    };
+    //Função que padroniza valor monétario - Utiliza a lib numeral.js
+		function formatCurrency(content, mask){
+			numeral.language('pt-br');
+			if(typeof mask === 'undefined'){
+				return numeral(content).format('0,0.00');
+			}else{
+				return numeral(content).format(mask);
+			}
+		};
 
     /*Função que padroniza Area*/
     function Area(content){
