@@ -90,6 +90,7 @@ module.exports = function(grunt) {
                   './bower_components/numeral/numeral.js',
                   './bower_components/numeral/languages/pt-br.js',
                   './bower_components/chartjs/Chart.js',
+                  //'./bower_components/Chart.js.legend/src/legend.js',
 				  './assets/js/script.js'
 				],
 				dest: './guideline/js/guideline.js',
