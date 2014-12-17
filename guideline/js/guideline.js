@@ -35151,6 +35151,37 @@ window.Chart = function(context){
 				return formatCPf(content);
 			}
     };
+    
+    function monthAsString(mes){
+      switch (Number(mes)) {
+        case 1:
+          return 'Janeiro';
+        case 2:
+          return 'Fevereiro';
+        case 3:
+          return 'Março';
+        case 4:
+          return 'Abril';
+        case 5:
+          return 'Maio';
+        case 6:
+          return 'Junho';
+        case 7:
+          return 'Julho';
+        case 8:
+          return 'Agosto';  
+        case 9:
+          return 'Setembro';
+        case 10:
+          return 'Outubro';
+        case 11:
+          return 'Novembro';
+        case 12:
+          return 'Dezembro';
+        default:
+          return '';
+      }
+    }
 
     //gerenciar notificações
 	/*
@@ -35243,6 +35274,7 @@ window.Chart = function(context){
     }
   }
   
+  //Usada para criar legenda dos graficos gerados pelo chart.js
   function legend(parent, data) {
     parent.className = 'legend';
     var datas = data.hasOwnProperty('datasets') ? data.datasets : data;
@@ -35256,7 +35288,7 @@ window.Chart = function(context){
         var title = document.createElement('span');
         title.className = 'title';
         var color = d.hasOwnProperty('strokeColor') ? d.strokeColor : d.color;
-        title.setAttribute("style", "margin-right: 10px; padding-left: 5px; border-left: 10px solid " + color);
+        title.setAttribute("style", "margin-right: 10px; padding-left: 5px; border-left: 15px solid " + color);
         parent.appendChild(title);
 
         var text = document.createTextNode(d.label);
