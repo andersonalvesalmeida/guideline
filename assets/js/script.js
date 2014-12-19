@@ -70,13 +70,15 @@
       return content
     }
 
-    /*Função que padroniza valor monétario*/
-		function formatCurrency(content){
-			content=content.replace(/\D/g,""); //Remove tudo o que não é dígito
-      content=content.replace(/^([0-9]{3}\.?){3}-[0-9]{2}$/,"$1.$2");
-      content=content.replace(/(\d)(\d{2})$/,"$1,$2"); //Coloca ponto antes dos 2 últimos digitos
-      return content;
-    };
+    //Função que padroniza valor monétario - Utiliza a lib numeral.js
+		function formatCurrency(content, mask){
+			numeral.language('pt-br');
+			if(typeof mask === 'undefined'){
+				return numeral(content).format('0,0.00');
+			}else{
+				return numeral(content).format(mask);
+			}
+		};
 
     /*Função que padroniza Area*/
     function Area(content){
@@ -115,6 +117,37 @@
 				return formatCPf(content);
 			}
     };
+    
+    function monthAsString(mes){
+      switch (Number(mes)) {
+        case 1:
+          return 'Janeiro';
+        case 2:
+          return 'Fevereiro';
+        case 3:
+          return 'Março';
+        case 4:
+          return 'Abril';
+        case 5:
+          return 'Maio';
+        case 6:
+          return 'Junho';
+        case 7:
+          return 'Julho';
+        case 8:
+          return 'Agosto';  
+        case 9:
+          return 'Setembro';
+        case 10:
+          return 'Outubro';
+        case 11:
+          return 'Novembro';
+        case 12:
+          return 'Dezembro';
+        default:
+          return '';
+      }
+    }
 
     //gerenciar notificações
 	/*
@@ -152,8 +185,122 @@
     });
     return n;
   }
+  
+  function getChartColor(index){
+    switch (index) {
+      case 1:
+        return '#F7464A'; //vermelho
+      case 2:
+        return '#46BFBD'; //verde
+      case 3:
+        return '#FDB45C'; //laranja
+      case 4:
+        return '#11305D'; //azul
+      case 5:
+        return '#FFEB3B'; //amarelo
+      case 6:
+        return '#673AB7'; //roxo
+      case 7:
+        return '#E91E63'; //rosa
+      case 8:
+        return '#6D4C41'; //marrom
+      case 9:
+        return '#607D8B'; //cinza
+      case 10:
+        return '#CDDC39'; //limão
+      default:
+        return '#5b90bf'; //azul
+    }
+  }
+  
+  function getChartColorAlpha(index){
+    switch (index) {
+      case '1':
+        return '#FF5A5E'; //vermelho
+      case 2:
+        return '#5AD3D1'; //verde
+      case 3:
+        return '#FFC870'; //laranja
+      case 4:
+        return '#325784'; //azul
+      case 5:
+        return '#FFEE58'; //amarelo
+      case 6:
+        return '#7E57C2'; //roxo
+      case 7:
+        return '#EC407A'; //rosa
+      case 8:
+        return '#795548'; //marrom
+      case 9:
+        return '#78909C'; //cinza
+      case 10:
+        return '#D4E157'; //limão
+      default:
+        return '#5b90bf'; //azul
+    }
+  }
+  
+  //Usada para criar legenda dos graficos gerados pelo chart.js
+  function legend(parent, data) {
+    parent.className = 'legend';
+    var datas = data.hasOwnProperty('datasets') ? data.datasets : data;
+
+    // remove possible children of the parent
+    while(parent.hasChildNodes()) {
+        parent.removeChild(parent.lastChild);
+    }
+
+    datas.forEach(function(d) {
+        var title = document.createElement('span');
+        title.className = 'title';
+        var color = d.hasOwnProperty('strokeColor') ? d.strokeColor : d.color;
+        title.setAttribute("style", "margin-right: 10px; padding-left: 5px; border-left: 15px solid " + color);
+        parent.appendChild(title);
+
+        var text = document.createTextNode(d.label);
+        title.appendChild(text);
+    });
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 (function(){
+	
+	 //Datatables
+   	
+   	$.extend( $.fn.dataTable.defaults, {
+      "language": {
+        "sEmptyTable": "Nenhum registro encontrado",
+        "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+        "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
+        "sInfoFiltered": "(Filtrados de _MAX_ registros)",
+        "sInfoPostFix": "",
+        "sInfoThousands": ".",
+        "sLengthMenu": "_MENU_ Resultados por página",
+        "sLoadingRecords": "Carregando...",
+        "sProcessing": "Processando...",
+        "sZeroRecords": "Nenhum registro encontrado",
+        "sSearch": "Pesquisar",
+        "oPaginate": {
+          "sNext": "Próximo",
+          "sPrevious": "Anterior",
+          "sFirst": "Primeiro",
+          "sLast": "Último"
+        },
+        "oAria": {
+          "sSortAscending": ": Ordenar colunas de forma ascendente",
+          "sSortDescending": ": Ordenar colunas de forma descendente"
+        }
+      }
+    });
 	
 	//Personalizar inputs type file que não permitem uploads multiplos.
 	$(':file').each(function(){
@@ -179,79 +326,6 @@
    		notificar(type, text);
    	});
    	
-   	
-   	//Datatables
-   	
-   	$.extend( $.fn.dataTable.defaults, {
-      "language": {
-        "sEmptyTable": "Nenhum registro encontrado",
-        "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
-        "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
-        "sInfoFiltered": "(Filtrados de _MAX_ registros)",
-        "sInfoPostFix": "",
-        "sInfoThousands": ".",
-        "sLengthMenu": "_MENU_ resultados por página",
-        "sLoadingRecords": "Carregando...",
-        "sProcessing": "Processando...",
-        "sZeroRecords": "Nenhum registro encontrado",
-        "sSearch": "Pesquisar",
-        "oPaginate": {
-          "sNext": "Próximo",
-          "sPrevious": "Anterior",
-          "sFirst": "Primeiro",
-          "sLast": "Último"
-        },
-        "oAria": {
-          "sSortAscending": ": Ordenar colunas de forma ascendente",
-          "sSortDescending": ": Ordenar colunas de forma descendente"
-        }
-      }
-    });
-    /*
-    $.fn.dataTable.TableTools.defaults.aButtons = [ "pdf", "csv", "xls", {"sExtends":"print", "sButtonText": "Imprimir"} ];
-    $.fn.dataTable.TableTools.defaults.sSwfPath = "guideline/swf/copy_csv_xls_pdf.swf";
-    
-    $('.datatables').dataTable({
-        "dom": '<"wrapper"flipt>',
-        "ajax": {
-                    "url": 'data.txt',
-                    "deferRender": true,
-                    "dataSrc": "data"
-                }
-    });
-    */
-    
-    $('.datatables').each(function(){
-      var ajax = $(this).data('ajax');
-      
-      if (typeof ajax !== 'undefined'){
-        var table = $(this).DataTable({
-          "ajax": {
-            "url": ajax,
-            "deferRender": true,
-            "dataSrc": "data"
-          }
-        });    
-      }else{
-          var table = $(this).DataTable();
-      }
-      var tt = new $.fn.dataTable.TableTools( table, {
-        "aButtons": [
-          "csv",
-          "xls",
-          "pdf",
-          {"sExtends":"print", "sButtonText": "Imprimir"}
-        ],
-        "sSwfPath": "http://guide-eicon-com-br.s3-website-sa-east-1.amazonaws.com/1.0.0/files/swf/copy_csv_xls_pdf.swf"
-    });
-
-    $( tt.fnContainer() ).insertBefore('div.dataTables_wrapper');
-        
-    });
-    
-    
-    
-
     
 
 })();

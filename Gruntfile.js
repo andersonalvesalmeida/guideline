@@ -16,7 +16,8 @@ module.exports = function(grunt) {
             files: {
                 src: [
                     'bower_components/datatables/media/css/jquery.dataTables.css',
-                    'bower_components/datatables-tabletools/css/dataTables.tableTools.css'
+                    'bower_components/blueimp-file-upload/css/jquery.fileupload.css',
+                    'bower_components/blueimp-file-upload/css/jquery.fileupload-ui.css'
                 ]
             }
         },
@@ -58,20 +59,7 @@ module.exports = function(grunt) {
                         expand: true,
                         filter: 'isFile',
                     },{
-                        src: 'bower_components/datatables-tabletools/swf/*',
-                        dest: 'guideline/swf/',
-                        flatten: true,
-                        expand: true,
-                        filter: 'isFile',
-                    },{
                         src: 'bower_components/datatables/media/images/*',
-                        dest: 'guideline/images/',
-                        flatten: true,
-                        expand: true,
-                        filter: 'isFile',
-                    }
-                    ,{
-                        src: 'bower_components/datatables-tabletools/images/*',
                         dest: 'guideline/images/',
                         flatten: true,
                         expand: true,
@@ -89,18 +77,19 @@ module.exports = function(grunt) {
 			javascript: {
 				src: [
 				  './bower_components/jquery/dist/jquery.js',
-                  './bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap.js',
+                  './bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
                   './bower_components/bootstrap-sass-datepicker/js/bootstrap-sass-datepicker.js',
                   './bower_components/bootstrap-sass-datepicker/js/locales/bootstrap-datepicker.pt-BR.js',
                   './bower_components/noty/js/noty/packaged/jquery.noty.packaged.js',
                   './bower_components/noty/js/noty/themes/bootstrap.js',
                   './bower_components/bootstrap-filestyle/src/bootstrap-filestyle.js',
                   './bower_components/datatables/media/js/jquery.dataTables.js',
-                  './bower_components/datatables-tabletools/js/dataTables.tableTools.js',
                   './assets/js/dataTables.bootstrap.js',
                   './bower_components/moment/moment.js',
+                  './bower_components/moment/locale/pt-br.js',
                   './bower_components/numeral/numeral.js',
                   './bower_components/numeral/languages/pt-br.js',
+                  './bower_components/chartjs/Chart.js',
 				  './assets/js/script.js'
 				],
 				dest: './guideline/js/guideline.js',
