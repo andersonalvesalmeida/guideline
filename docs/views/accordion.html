@@ -3,226 +3,117 @@
     <p>
         <ul>
             <li>
-                <a href="http://getbootstrap.com/css/#type">http://getbootstrap.com/css/#type</a>
+                <a href="http://getbootstrap.com/javascript/#collapse">http://getbootstrap.com/javascript/#collapse</a>
             </li>
         </ul>
     </p>
 
     <div class="row">
-        <div class="row">
-        <div class="col-md-6">
-            <h3>jQuery UI - Accordion</h3>
-
-            <h4>Links</h4>
-            <p>
-                <ul>
-                    <li>
-                        <a href="//jqueryui.com/">jQuery UI Website</a>
-                    </li>
-                    <li>
-                        <a href="//jqueryui.com/demos/accordion/">Accordion Documentation</a>
-                    </li>
-                </ul>
-            </p>
-        </div>
-         <div class="col-md-6">
-            <h3>Bootstrap - Collapse</h3>
-
-            <h4>Links</h4>
-            <p>
-                <ul>
-                    <li>
-                        <a href="//twitter.github.com/bootstrap/javascript.html#collapse">Collapse Documentation</a>
-                    </li>
-                </ul>
-            </p>
-        </div>
-    </div>
-
-    <hr class="soften" />
-
-    <div class="row">
         <div class="span12">
-            Em um accordion, deve-se abrir cada ítem por vez. Caso seja necessário abrir mais opções, deve ser utilizado o <a href="<?php echo getURL('componentes/datagrid'); ?>">datagrid</a>.
+            Em um accordion, deve-se abrir cada ítem por vez. Caso seja necessário abrir mais opções, deve ser utilizado o <a href="#/datatables">datatables com agrupamento por colunas</a>.
         </div>
     </div>
     <div class="row">
         <div class="col-md-6">
             <h3>Accordion básico</h3>
-            <p>Aplicação básica do componente sem utilizar nenhuma configuração customizada.</p>
-            <p>
-                <div id="accordion">
-                    <h3>
-                        <a href="#">Section 1</a>
-                    </h3>
-                    <div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod, eros non tincidunt laoreet, dui odio volutpat turpis, vitae dignissim lectus justo id quam. Maecenas odio dui, vulputate eget porttitor at, fringilla vel lacus. Suspendisse eu metus massa.
-                        </p>
-                    </div>
-                    <h3>
-                        <a href="#">Section 2</a>
-                    </h3>
-                    <div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod, eros non tincidunt laoreet, dui odio volutpat turpis, vitae dignissim lectus justo id quam. Maecenas odio dui, vulputate eget porttitor at, fringilla vel lacus. Suspendisse eu metus massa.
-                        </p>
-                        </p>
-                    </div>
-                    <h3>
-                        <a href="#">Section 3</a>
-                    </h3>
-                    <div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod, eros non tincidunt laoreet, dui odio volutpat turpis, vitae dignissim lectus justo id quam. Maecenas odio dui, vulputate eget porttitor at, fringilla vel lacus. Suspendisse eu metus massa.
-                        </p>
-                        </p>
-                        <ul>
-                            <li>List item one</li>
-                            <li>List item two</li>
-                            <li>List item three</li>
-                        </ul>
-                    </div>
+            <p>Aplicação básica do componente sem utilizar nenhuma configuração customizada, utilizando apenas marcação HTML.</p>
+            <p class="alert alert-info">Este exemplo não utiliza uma chamada em javascript específica pois utiliza o processo de injeção via data-api do bootstrap.</p>
+
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Item 1 do Accordion
+                    </a>
+                  </h4>
                 </div>
-            </p>
-            <p>
-<pre class="prettyprint">
-$(function() {
-  $( "#accordion" ).accordion();
-});            	
-</pre>            
-            </p>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Item 2 do Accordion
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="panel-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                  <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Item 3 do Accordion
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                  <div class="panel-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
+
         <div class="col-md-6">
-            <h3>Collapse básico</h3>
-            <p>
-                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-				  <div class="panel panel-default">
-				    <div class="panel-heading" role="tab" id="headingOne">
-				      <h4 class="panel-title">
-				        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <h3>Código de exemplo</h3>
+            <pre>
+                &lt;div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"&gt;
+				  &lt;div class="panel panel-default"&gt;
+				    &lt;div class="panel-heading" role="tab" id="headingOne"&gt;
+				      &lt;h4 class="panel-title"&gt;
+				        &lt;a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"&gt;
 				          Collapsible Group Item #1
-				        </a>
-				      </h4>
-				    </div>
-				    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-				      <div class="panel-body">
+				        &lt;/a&gt;
+				      &lt;/h4&gt;
+				    &lt;/div&gt;
+				    &lt;div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne"&gt;
+				      &lt;div class="panel-body"&gt;
 				        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-				      </div>
-				    </div>
-				  </div>
-				  <div class="panel panel-default">
-				    <div class="panel-heading" role="tab" id="headingTwo">
-				      <h4 class="panel-title">
-				        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+				      &lt;/div&gt;
+				    &lt;/div&gt;
+				  &lt;/div&gt;
+				  &lt;div class="panel panel-default"&gt;
+				    &lt;div class="panel-heading" role="tab" id="headingTwo"&gt;
+				      &lt;h4 class="panel-title"&gt;
+				        &lt;a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"&gt;
 				          Collapsible Group Item #2
-				        </a>
-				      </h4>
-				    </div>
-				    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-				      <div class="panel-body">
+				        &lt;/a&gt;
+				      &lt;/h4&gt;
+				    &lt;/div&gt;
+				    &lt;div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo"&gt;
+				      &lt;div class="panel-body"&gt;
 				        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-				      </div>
-				    </div>
-				  </div>
-				  <div class="panel panel-default">
-				    <div class="panel-heading" role="tab" id="headingThree">
-				      <h4 class="panel-title">
-				        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+				      &lt;/div&gt;
+				    &lt;/div&gt;
+				  &lt;/div&gt;
+				  &lt;div class="panel panel-default"&gt;
+				    &lt;div class="panel-heading" role="tab" id="headingThree"&gt;
+				      &lt;h4 class="panel-title"&gt;
+				        &lt;a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"&gt;
 				          Collapsible Group Item #3
-				        </a>
-				      </h4>
-				    </div>
-				    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-				      <div class="panel-body">
+				        &lt;/a&gt;
+				      &lt;/h4&gt;
+				    &lt;/div&gt;
+				    &lt;div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree"&gt;
+				      &lt;div class="panel-body"&gt;
 				        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-				      </div>
-				    </div>
-				  </div>
-				</div>
-            </p>
-            <p class="alert">Este exemplo não utiliza uma chamada em javascript específica pois utiliza o processo de injeção via data-api do bootstrap.</p>
+				      &lt;/div&gt;
+				    &lt;/div&gt;
+				  &lt;/div&gt;
+				&lt;/div&gt;
+            </pre>
         </div>
     </div>
 
-    <h2>Accordion com navegação</h2>
-    <div class="accordion-nav">
-        <div class="accordion-nav-options">
-            <span>Total previsto: R$ 20.000,00</span>
-        </div>
-        <h4>Contas de Consumo</h4>
-    </div>
-    <div class="accordion" id="accordion2">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                <div class="accordion-heading-options">
-                    <span>Previsto: R$ 20.000,00</span>
-                    <a class="btn btn-inverse btn-mini">Incluir Item</a>
-                </div>
-                <a class="accordion-toggle"
-         data-toggle="collapse"
-         data-parent="#accordion2"
-         href="#collapse2">Piscina</a>
-            </div>
-            <div id="collapse2" class="accordion-body collapse">
-                <div class="accordion-inner">... Conteúdo ...</div>
-            </div>
-        </div>
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                <div class="accordion-heading-options">
-                    <span>Previsto: R$ 20.000,00</span>
-                    <button class="btn btn-inverse btn-mini" disabled>Incluir Item</button>
-                </div>
-                <a class="accordion-toggle"
-         data-toggle="collapse"
-         data-parent="#accordion2"
-         href="#collapse3">Campo de futebol</a>
-            </div>
-            <div id="collapse3" class="accordion-body collapse">
-                <div class="accordion-inner">... Conteúdo ...</div>
-            </div>
-        </div>
-    </div>
-<pre class="prettyprint">
-&lt;div class="accordion-nav"&gt;
-        &lt;div class="accordion-nav-options"&gt;
-            &lt;span&gt;Total previsto: R$ 20.000,00&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;h4&gt;Contas de Consumo&lt;/h4&gt;
-    &lt;/div&gt;
-    &lt;div class="accordion" id="accordion2"&gt;
-        &lt;div class="accordion-group"&gt;
-            &lt;div class="accordion-heading"&gt;
-                &lt;div class="accordion-heading-options"&gt;
-                    &lt;span&gt;Previsto: R$ 20.000,00&lt;/span&gt;
-                    &lt;a class="btn btn-inverse btn-mini"&gt;Incluir Item&lt;/a&gt;
-                &lt;/div&gt;
-                &lt;a class="accordion-toggle"
-         data-toggle="collapse"
-         data-parent="#accordion2"
-         href="#collapse2"&gt;Piscina&lt;/a&gt;
-            &lt;/div&gt;
-            &lt;div id="collapse2" class="accordion-body collapse"&gt;
-                &lt;div class="accordion-inner"&gt;... Conteúdo ...&lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="accordion-group"&gt;
-            &lt;div class="accordion-heading"&gt;
-                &lt;div class="accordion-heading-options"&gt;
-                    &lt;span&gt;Previsto: R$ 20.000,00&lt;/span&gt;
-                    &lt;button class="btn btn-inverse btn-mini" disabled&gt;Incluir Item&lt;/button&gt;
-                &lt;/div&gt;
-                &lt;a class="accordion-toggle"
-         data-toggle="collapse"
-         data-parent="#accordion2"
-         href="#collapse3"&gt;Campo de futebol&lt;/a&gt;
-            &lt;/div&gt;
-            &lt;div id="collapse3" class="accordion-body collapse"&gt;
-                &lt;div class="accordion-inner"&gt;... Conteúdo ...&lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;            	
-</pre>
-    </div>    
 </section>
