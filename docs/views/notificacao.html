@@ -1,42 +1,53 @@
-<a href="#" class="dropdown-toggle notification-toggle" data-toggle="dropdown">
-    <i class="icon-white icon-inbox"></i>
-    <span class="notification-counter">4</span>
-    <b class="caret"></b>
-</a>
-<div class="notifications-menu dropdown-menu">
-    <div class="header">
-        <a href="#" class="all-notifications">Central de notificações</a>
-        <span class="header-title">Notificações</span>
+<section>
+    <h4>Referências</h4>
+    <p>
+        <ul>
+            <li>
+                <a href="http://ned.im/noty/#/about">http://ned.im/noty/#/about</a>
+            </li>
+        </ul>
+    </p>
+
+    <div class="col-md-6">
+        <h3>Informações</h3>
+
+        <p>As notificações são uma implementação do plugin <b>noty</b> com algumas implementações e estilo visual padronizados para conformidade com a guideline.</p>
+        <p>A forma de disparar uma notificação também foi reescrita, e torna a utilização mais facil pelos desenvolvedores.</p>
+
+        <p>As notificações do tipo <span class="label label-primary">Alert</span>, <span class="label label-warning">Warning</span> e <span class="label label-success">Success</span> não bloqueiam o uso da aplicação e serão fechadas após 5 segundos do seu disparo.</p>
+        <p>A notificação do tipo <span class="label label-danger">Error</span> irá bloquear o uso da aplicação e sómente desbloqueará quando o usuário fechar a notificação.</p>
+        <p>A notificaçõe do tipo <span class="label label-info">Information</span> bloqueia o uso da aplicação e só desbloqueis utilizando a função <code>$.noty.closeAll();</code>. Essa notificação é usada por exemplo no <a href="#/datatables">Datatable</a> exibindo uma mensagem ao usuário enquanto processando os dados e some ao fim do processo.</p>
+
+
     </div>
-    <div class="notifications">
-        <a href="#" class="notification notification-unread">
-            <div class="notification-block">
-                <small class="notification-date">10 minutos atrás</small>
-                <h6 class="notification-title">Inclusão da central de notificações</h6>
-                <p class="notification-text">A Central de Notificações contém todas as notificações do sistema, facilitando assim quando houverem muitas notificações a serem vistas pelo usuário.
-Esse primeiro link leva diretamente a Central de Notificações.</p>
-            </div>
-        </a>
-        <a href="#" class="notification notification-unread">
-            <div class="notification-block">
-                <small class="notification-date">20 minutos atrás</small>
-                <h6 class="notification-title">Inclusão da central de notificações</h6>
-                <p class="notification-text">Esse é um exemplo de uma notificação isolada, esse link leva direto a tela do sistema ao qual se refere a notificação..</p>
-            </div>
-        </a>
-        <a href="#" class="notification notification-unread">
-            <div class="notification-block">
-                <small class="notification-date">30 minutos atrás</small>
-                <h6 class="notification-title">Inclusão da central de notificações</h6>
-                <p class="notification-text">Esse é um exemplo de uma notificação isolada, esse link leva direto a tela do sistema ao qual se refere a notificação..</p>
-            </div>
-        </a>
-        <a href="#" class="notification notification-unread">
-            <div class="notification-block">
-                <small class="notification-date">40 minutos atrás</small>
-                <h6 class="notification-title">Inclusão da central de notificações</h6>
-                <p class="notification-text">Esse é um exemplo de uma notificação isolada, esse link leva direto a tela do sistema ao qual se refere a notificação..</p>
-            </div>
-        </a>
+    <div class="col-md-6">
+        <h3>Utilização</h3>
+
+        <pre>
+            notificar('alert', "Esta é uma mensagem do tipo 'Alert'");
+        </pre>
+
+        <h3>Exemplos</h3>
+
+        <div class="btn-group" data-toggle="buttons">
+            <button type="button" class="btn btn-primary" data-type="alert">Alert</button>
+            <button type="button" class="btn btn-warning" data-type="warning">Warning</button>
+            <button type="button" class="btn btn-success" data-type="success">Success</button>
+            <button type="button" class="btn btn-danger" data-type="error">Error</button>
+            <button type="button" class="btn btn-info" data-type="information">Information</button>
+        </div>
     </div>
-</div>
+</section>
+
+<script>
+    $(document).ready(function(){
+        $('.btn').on('click',function(){
+            var type = $(this).data('type');
+            notificar(type, "Esta é uma mensagem do tipo "+ type);
+
+            if(type === 'information'){
+                setTimeout(function(){$.noty.closeAll();}, 5000);
+            }
+        });
+    });
+</script>

@@ -18,6 +18,8 @@
 	      		<li>Os demais atributos como animação, orientação e etc, podem ser informados atravez de Javascript ou data-attributes no HTML</li>
 	      		<li>Por padrão, o tooltip possui orientação TOP, podendo ser alterada com o atributo <code>data-placement="top|bottom|left|right"</code></li>
 	      	</ul>
+
+	    <p class="alert alert-info"><span class="badge badge-warning">Atenção</span> O tooltip será disparada automaticamente quando o elemento possuir o elemento <code>data-toggle="tooltip"</code></p>
       		
 	      
 	    </div>
@@ -29,11 +31,22 @@
 			&lt;/a&gt;
 			</pre>	
 			
-	 		<input type="text" value="Clique aqui!" tooltip="See? Now click away..."  tooltip-trigger="focus" tooltip-placement="top" class="form-control" style="margin: 35px 0;" />
-	 		<p>
-	 			<a href="" title="Eu sou um exemplo!" tooltip-html-unsafe="{{htmlTooltip}}">Demonstração</a>
-	 		</p>
+			<div class="btn-group" data-toggle="buttons">
+				<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip à esquerda">Esquerda</button>
+
+				<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip em cima">Acima</button>
+
+				<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip em baixo">Embaixo</button>
+
+				<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip à direita">Direita</button>
+			</div>	
 		</div> 
   </div>
   
 </section>
+
+<script>
+	$(function () {
+	  $('[data-toggle="tooltip"]').tooltip()
+	})
+</script>

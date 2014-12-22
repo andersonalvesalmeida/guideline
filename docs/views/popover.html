@@ -34,6 +34,7 @@
 		</pre>
 
 		<h3>Atributos via Javascript</h3>
+		
 		<pre class="brush: jscript">
 		$("#btn-popover").popover({ 
 			placement: 'right',
@@ -41,31 +42,60 @@
 			content: 'Clique aqui para acessar',
 			title:'Título'
 		});
-		</pre>	
+		</pre>
+
+		<p class="alert alert-info"><span class="badge badge-warning">Atenção</span> O popover será disparada automaticamente quando o elemento possuir o elemento <code>data-toggle="popover"</code></p>	
     </div>
     <div class="col-md-6">
 		<h3>Demonstração</h3>
 
 		<h4>Uso simples</h4>
- 		<p>
- 			<button popover="{{dynamicPopover}}" popover-title="{{dynamicPopoverTitle}}" class="btn btn-default">Clique para testar	</button>
- 		</p>
+
+		<button type="button" class="btn btn-default" data-toggle="popover" title="Popover simples" data-content="Aqui vai todo o conteúdo do popover">Popover simples</button>
+
+		<h4>Descartavel <small>Fecha ao clicar em qualquer ponto da tela</small></h4>
+
+		<a href="javascript:void(0)" tabindex="0" class="btn btn-default" role="button" data-toggle="popover" data-trigger="focus" title="Popover descartavel" data-content="Aqui vai todo o conteúdo do popover">Popover descartavel</a>
 
  		<h4>Posicional</h4>
-	    <button popover-placement="top" popover="Acima!" class="btn btn-default">Acima</button>
-	    <button popover-placement="left" popover="A esquerda!" class="btn btn-default">Esquerda</button>
-	    <button popover-placement="right" popover="A direita!" class="btn btn-default">Direita</button>
-	    <button popover-placement="bottom" popover="Embaixo!" class="btn btn-default">Embaixo</button>
+
+		<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="Demonstração do popover.">
+		  Esquerda
+		</button>
+
+		<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Demonstração do popover.">
+		  Acima
+		</button>
+
+		<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Demonstração do popover.">
+		  Embaixo
+		</button>
+
+		<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="Demonstração do popover.">
+		  Direita
+		</button>
 
 	    <h4>Gatilhos</h4>
-	    <p>
-	      <button popover="Eu apareci com o evento mouse over!" popover-trigger="mouseenter" class="btn btn-default">Mouse Over</button>
-	    </p>
-	    <input type="text" value="Clique aqui!" popover="Eu apareci no evento on focus! Clique denovo para fechar..."  popover-trigger="focus" class="form-control">
+		
+		<p>
+			4 gatilhos estão disponíveis para uso: <span class="label label-info">click</span>, <span class="label label-info">hover</span>, <span class="label label-info">focus</span> e <span class="label label-info">manual</span>
+		</p>
+
+		<p>
+			<button type="button" class="btn btn-default" data-toggle="popover" data-trigger="hover" title="Mouse Over" data-content="Eu apareci com o evento mouse over!">Hover</button>
+		</p>
+		
+		<input type="text" class="form-control" data-toggle="popover" title="Popover simples" data-content="Eu apareci no evento click! Clique denovo para fechar..." placeholder="Clique aqui" data-placement="top"/>
 
       </div> 
   </div>
   
 </section>
+
+
+
+<script>
+	$('[data-toggle="popover"]').popover();
+</script>
 
 

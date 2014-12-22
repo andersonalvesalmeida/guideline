@@ -1,0 +1,37 @@
+<section>
+    <div class="row">
+        <div class="col-md-6">
+
+        	<h2>Pré-requisitos</h2>
+		    <p>
+		        <ol>
+		            <li><a href="http://git-scm.com/">Git</a></li>
+		            <li><a href="https://www.npmjs.com/">npm</a> - É instalado jundo com o Node</li>
+		            <li><a href="http://nodejs.org/">Node</a></li>
+		            <li><a href="http://bower.io/">Bower</a></li>
+		            <li><a href="http://gruntjs.com/">Grunt</a></li>
+		        </ol>
+		    </p>
+
+		    <p>Siga o processo de instalacão utilizando os links acima na ordem em que aparecem na lista.</p>
+
+            <h2>Repositório GitHub</h2>
+            <p>Faça um clone ou fork do projeto <code>git@github.com:andersonalvesalmeida/guideline.git</code></p>
+        </div>
+        <div class="col-md-6">
+            <h2>Criando um build</h2>
+            <ul>
+                <li>Abra uma instância do terminal/cmd e vá para a pasta onde você clonou o projeto <code>git@github.com:andersonalvesalmeida/guideline.git</code>.</li>
+                <li>Instale as dependências do node utilizando o comando <code>sudo npm install</code>.</li>
+                <li>Instale as dependências do bower utilizando o comando <code>bower update</code>.</li>
+                <li>Execute na raiz do projeto o comando <code>grunt build</code> se você estiver utilizando uma plataforma <strong>Unix</strong> ou <code>grunt build.cmd</code> se você estiver no <strong>Windows</strong> para iniciar o build.</li>
+            </ul>
+
+            <p><span class="badge badge-success">Sucesso!</span> Verifique o diretório <code>/guideline</code> na raiz do projeto. diretórios contendo os arquivos da guideline estarão lá.</p>
+
+            <p>A versão não minificada desses arquivos encontram-se também nesses diretórios. Eles são melhores para o desenvolvimento pois são apenas concatenados.</p>
+
+            <p class="alert alert-warning"><span class="badge badge-warning">Atenção</span> Certifique-se de sempre utilizar a versão <strong>minificada</strong> dos arquivos em produção. Esses arquivos já foram otimizados para obter a melhor performance de carregamento.</p>
+        </div>
+    </div>
+</section>
