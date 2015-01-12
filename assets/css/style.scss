@@ -1,3 +1,117 @@
+// Alterações Planetun
+
+body {
+  //font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 12px;
+  background: url(../images/bg.png);
+}
+
+.container-fluid {
+  margin-right: 15px;
+  margin-left: 15px;
+  padding: 15px 100px 15px 100px;
+  border: 1px solid #CCC;
+  background-color: #FFF;
+}
+
+//Fieldset
+
+fieldset {
+  // border: 1px groove #ddd !important;
+  padding: 0 1.4em 1.4em 1.4em !important;
+  margin: 0 0 1.5em 0 !important;
+  // -webkit-box-shadow:  0px 0px 0px 0px #000;
+  //         box-shadow:  0px 0px 0px 0px #000;
+
+  border: 1px solid #cecece;
+  // margin-bottom: 10px;
+  padding-top: 15px !important;
+  padding-bottom: 10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  color: #666 !important;          
+}
+
+legend {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: $secundary-color;
+  font-weight: bold;
+  text-align: left;
+  font-weight: bold;
+  text-align: left;
+  width:auto;
+  padding:0 10px;
+  border-bottom:none;
+}
+
+//Navibar
+
+.navbar {
+  min-height: 60px;
+  margin-bottom: 4px;
+}
+
+.navbar-default {
+  background-color: #FFF;
+  border-bottom: 2px solid $secundary-color;
+  box-shadow: 0 4px 0 $primary-color;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+  color: #FFF;
+  background-color: $primary-color;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+  color: #FFF;
+  background-color: $primary-color;
+}
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+  text-decoration: none;
+  color: #FFF;
+  background-color: $primary-color;
+}
+
+.navbar-brand {
+  padding: 2px 30px 2px 30px;
+}
+
+@media (min-width: 768px){
+  .navbar-nav>li>a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.center{
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+//Alerts
+
+.alert{
+  font-size: 13px;
+}
+.alert-warning {
+  @include alert-variant($alert-warning-background-color, $alert-warning-border-color, $alert-warning-text-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 h1, .h1 {
 	font-size: 24px;
 }

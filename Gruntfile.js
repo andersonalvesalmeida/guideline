@@ -129,13 +129,13 @@ module.exports = function(grunt) {
                     livereload: true                        //atualiza o navegador
                 }
             },
-            js: {
-			    files: ['./assets/js/*.*'],		//arquivos monitorados
-			    tasks: ['concat:javascript','uglify'],  //tarefas executadas
-			    options: {
-			    	livereload: true                    //atualiza o navegador
-			    }
-			},
+   //          js: {
+			//     files: ['./assets/js/*.*'],		//arquivos monitorados
+			//     tasks: ['concat:javascript','uglify'],  //tarefas executadas
+			//     options: {
+			//     	livereload: true                    //atualiza o navegador
+			//     }
+			// },
             imagemin:{
                 files: ['./assets/image/*.{png,jpg,gif}'],
                 tasks: ['imagemin']
