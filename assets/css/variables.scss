@@ -1,6 +1,7 @@
 $brand-secundary:         #666666 !default;
 
-//Planetun
+//Planetun colors
+$basic-color: #878787;
 $primary-color: #00536E;
 $primary-color-selected: #01799D;
 $secundary-color: orange;
@@ -13,3 +14,16 @@ $alert-warning-text-color: #c37d02 ;
 
 
 $alert-padding: 10px;
+
+
+//breadcrumb
+$breadcrumb-color: $basic-color;
+$breadcrumb-first-color: $secundary-color;
+$breadcrumb-font-size: 13px;
+$breadcrumb-font-style: italic;
+$breadcrumb-active-color: $primary-color;
+$breadcrumb-active-font-size: 16px;
+
+//links
+$link-hover-color: $secundary-color;
+$link-color: $basic-color;

@@ -119,12 +119,12 @@ module.exports = function(grunt) {
                 }]
             }
         },
-
+        
         // Watch files and trigger tasks
         watch: {
             sass: {
                 files: ['./assets/css/*.scss'],
-                tasks: ['sass'],
+                tasks: ['sass', 'replace'],
                 options: {
                     livereload: true                        //atualiza o navegador
                 }
