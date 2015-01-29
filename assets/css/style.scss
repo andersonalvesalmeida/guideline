@@ -12,11 +12,12 @@ body {
 }
 
 .content {
-  padding: 15px 100px 15px 100px;
+  padding: 15px 0;
   border: 1px solid #CCC;
   background-color: #FFF;
   position: relative;
   margin-top: -1px;
+  min-height: 600px;
 }
 
 //Fieldset
@@ -30,7 +31,7 @@ fieldset {
 
   border: 1px solid #cecece;
   // margin-bottom: 10px;
-  padding-top: 15px !important;
+  // padding-top: 15px !important;
   padding-bottom: 10px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -197,6 +198,46 @@ footer{
     font-size: $breadcrumb-active-font-size;
   }
 }
+
+//Listas
+
+.dl-horizontal {
+  margin-bottom: 0;
+  dt {
+    color: $secundary-color;
+  }
+  @media (min-width: $grid-float-breakpoint) {
+    dt {
+      width: ($dl-horizontal-offset - 8);
+    }
+    dd {
+      margin-left: $dl-horizontal-offset;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
