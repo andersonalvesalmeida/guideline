@@ -12,7 +12,7 @@ body {
 }
 
 .content {
-  padding: 15px 0;
+  padding: 15px 10px;
   border: 1px solid #CCC;
   background-color: #FFF;
   position: relative;
@@ -254,31 +254,32 @@ footer{
 
 
 
-h1, .h1 {
-	font-size: 24px;
+
+/* h1, .h1 {
+  font-size: 24px;
 }
 h2, .h2{
-		font-size: 18px;
-}
+    font-size: 18px;
+} */
 	
 .dataTables_processing{
 	display: none !important;
 }
 
-//
+/* //
 .table {
   // Cells
   > thead,
   > tfoot {
-      background-color: $brand-primary;
+      background-color: $primary-color;
       color: $btn-default-bg;
       font-size: $font-size-small;
       tr{
         td, th{
           text-transform: uppercase !important;
           text-align: left !important;
-        	font-size: 10px;
-          padding: 4px 20px 4px 4px;
+          font-size: 11px;
+          padding: 5px 20px 5px 4px;
         }
       }
   }
@@ -286,10 +287,10 @@ h2, .h2{
       tr{
         td{
           padding: 4px;
-	        font-size: 12px;  
+          font-size: 12px;  
         }
       }
-}
+} */
 
 .nowrap{
   white-space: nowrap;
