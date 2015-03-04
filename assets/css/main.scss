@@ -1,5 +1,6 @@
 @import "assets/css/variables_tmp.scss";
 @import "assets/css/_variables.scss";
+@import "assets/css/bootstrap-chosen-variables.scss";
 @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "assets/css/_theme.scss";
 @import "bower_components/bootstrap-sass-datepicker/sass/datepicker.scss";
@@ -7,6 +8,7 @@
 @import "assets/css/dataTables.bootstrap.scss";
 // @import "bower_components/blueimp-file-upload/css/jquery.fileupload.scss";
 // @import "bower_components/blueimp-file-upload/css/jquery.fileupload-ui.scss";
+@import "assets/css/bootstrap-chosen.scss";
 @import "assets/css/overview.scss";
 @import "assets/css/style.scss";
 

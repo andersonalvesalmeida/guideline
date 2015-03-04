@@ -64,22 +64,22 @@ legend {
 .navbar-default {
   background-color: #FFF;
   border-bottom: 2px solid $secundary-color;
-  box-shadow: 0 6px 0 $primary-color;
+  box-shadow: 0 6px 0 $brand-secundary;
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
   color: #FFF;
-  background-color: $primary-color;
+  background-color: $brand-secundary;
 }
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
   color: #FFF;
-  background-color: $primary-color;
+  background-color: $brand-secundary;
 }
 
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
   text-decoration: none;
   color: #FFF;
-  background-color: $primary-color;
+  background-color: $brand-secundary;
 }
 
 .navbar-brand {
