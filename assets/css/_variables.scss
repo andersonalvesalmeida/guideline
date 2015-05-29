@@ -19,12 +19,12 @@ $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
-$brand-primary:         orange !default;  //Laranja planetun
-$brand-secundary:       #00536E !default;  //Azul planetun
+$brand-primary:         #0159a1 !default;  
+$brand-secundary:       #f4bb36 !default; 
 $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
-$brand-danger:          #d9534f !default;
+$brand-danger:          #ff4b40 !default;
 
 
 //== Scaffolding

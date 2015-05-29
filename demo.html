@@ -38,19 +38,14 @@
 	          </ul>
 	        </li>
 	      </ul>
-	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#">Link</a></li>
-	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-	          <ul class="dropdown-menu" role="menu">
-	            <li><a href="#">Action</a></li>
-	            <li><a href="#">Another action</a></li>
-	            <li><a href="#">Something else here</a></li>
-	            <li class="divider"></li>
-	            <li><a href="#">Separated link</a></li>
-	          </ul>
-	        </li>
-	      </ul>
+        <form class="navbar-form navbar-right">
+            <span id="notification">10</span>
+            <a class="btn btn-primary" href="javascript:void(0)" id="btn-novo-pedido">Novo Pedido</a>
+            <a href="javascript:void(0)">
+                <span class="glyphicon glyphicon-log-out"></span>
+                <span>Sair</span>
+            </a>
+        </form>
 	    </div><!-- /.navbar-collapse -->
 	  <!-- /.container-fluid -->
 	</nav>
@@ -75,127 +70,42 @@
         <![endif]-->
       </div>
 
+      <div class="page-header">
+          <h1>Typography</h1>
+      </div>
+
 			
-			
-			<div class="page-header">
-	      <h1>Box</h1>
-	    </div>
-	
+        <table class="table">
+          <tbody>
+            <tr>
+              <td>default. Bootstrap heading <small>Secondary text</small></td>
+            </tr>
+            <tr>
+              <td><h1 id="h1.-bootstrap-heading-secondary-text">h1. Bootstrap heading <small>Secondary text</small></h1></td>
+            </tr>
+            <tr>
+              <td><h2 id="h2.-bootstrap-heading-secondary-text">h2. Bootstrap heading <small>Secondary text</small></h2></td>
+            </tr>
+            <tr>
+              <td><h3 id="h3.-bootstrap-heading-secondary-text">h3. Bootstrap heading <small>Secondary text</small></h3></td>
+            </tr>
+            <tr>
+              <td><h4 id="h4.-bootstrap-heading-secondary-text">h4. Bootstrap heading <small>Secondary text</small></h4></td>
+            </tr>
+            <tr>
+              <td><h5 id="h5.-bootstrap-heading-secondary-text">h5. Bootstrap heading <small>Secondary text</small></h5></td>
+            </tr>
+            <tr>
+              <td><h6>h6. Bootstrap heading <small>Secondary text</small></h6></td>
+            </tr>
+            <tr>
+              <td><p>p. Bootstrap heading <small>Secondary text</small></p></td>
+            </tr>
+          </tbody>
+        </table>			
+		
 
-			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-				<fieldset class="scheduler-border">
-					<legend class="scheduler-border">Texto do Box</legend>
-					
-					<div class="visible-lg-block visible-sm-block">
-						<dl class="dl-horizontal">
-						  <dt>Seguradora:</dt>
-						  <dd>LIBERTY SEGUROS - MATRIZ</dd>
-						</dl>
-						<div style="width: 40%; float:left">
-							<dl class="dl-horizontal">
-							  <dt>Apolice:</dt>
-							  <dd>3195081237</dd>
-							  <dt>N. Sinistro:</dt>
-							  <dd>3490791</dd>
-							  <dt>Tipo:</dt>
-							  <dd>Liberado</dd>
-							</dl>
-						</div>
-						<div style="width: 60%; float:left">
-							<dl class="dl-horizontal">
-							  <dt>Perito:</dt>
-							  <dd>ANDRE BARROS</dd>
-							  <dt>Dt. Sinistro:</dt>
-							  <dd>22/01/15</dd>
-							  <dt>Liberação:</dt>
-							  <dd>22/01/15</dd>
-							</dl>						
-						</div>  
-					</div>
-
-					<div class="visible-xs-block visible-md-block">
-						<dl class="dl-horizontal">
-						  <dt>Seguradora:</dt>
-						  <dd>LIBERTY SEGUROS - MATRIZ</dd>
-						  <dt>Apolice:</dt>
-						  <dd>3195081237</dd>
-						  <dt>Perito:</dt>
-						  <dd>ANDRE BARROS</dd>
-						  <dt>N. Sinistro:</dt>
-						  <dd>3490791</dd>
-						  <dt>Dt. Sinistro:</dt>
-						  <dd>22/01/15</dd>
-						  <dt>Tipo:</dt>
-						  <dd>Liberado</dd>
-						  <dt>Liberação:</dt>
-						  <dd>22/01/15</dd>
-						</dl>
-					</div>	
-
-				</fieldset>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-				<fieldset class="scheduler-border">
-					<legend class="scheduler-border">Texto do Box</legend>
-					<div class="visible-xs-block visible-md-block ">
-						<dl class="dl-horizontal">
-						  <dt>Montadora:</dt>
-						  <dd>CHEVROLET</dd>
-						  <dt>Veículo:</dt>
-						  <dd>GM CELTA (07 - ) LS 5P 1.</dd>
-						  <dt>Fabricação/Modelo:</dt>
-						  <dd>2012/2012</dd>
-						  <dt>Placa:</dt>
-						  <dd>EWQ8529</dd>
-						  <dt>Chassi:</dt>
-						  <dd>-9BGRG48F0CG353180</dd>
-						</dl>
-					</div>
-					<div class="visible-lg-block visible-sm-block">
-						<dl class="dl-horizontal">
-						  <dt>Montadora:</dt>
-						  <dd>CHEVROLET</dd>
-						  <dt>Veículo:</dt>
-						  <dd>GM CELTA (07 - ) LS 5P 1.</dd>
-						</dl>
-						<div style="width: 40%; float:left">
-							<dl class="dl-horizontal">
-							  <dt>Fabricação/Modelo:</dt>
-							  <dd>2012/2012</dd>
-							</dl>
-						</div>
-						<div style="width: 60%; float:left">
-							<dl class="dl-horizontal">
-							  <dt>Placa:</dt>
-							  <dd>EWQ8529</dd>
-							</dl>  
-						</div>
-						<dl class="dl-horizontal">  
-						  <dt>Chassi:</dt>
-						  <dd>-9BGRG48F0CG353180</dd>
-						</dl>  
-					</div>
-				</fieldset>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-				<fieldset class="scheduler-border">
-					<legend class="scheduler-border">Texto do Box</legend>
-					<dl class="dl-horizontal">  
-					  <dt>Nome</dt>
-					  <dd>FUNILARIA SOUZA - ADEMAR</dd>
-					  <dt>Telefone</dt>
-					  <dd>(16) 33718247</dd>
-					  <dt>E-Mail</dt>
-					  <dd>le_mascarinn@yahoo.com.br</dd>
-					  <dt>Cidade/UF</dt>
-					  <dd>SAO CARLOS/SP</dd>
-					</dl>
-				</fieldset>
-			</div>
-
-			<div class="clearfix"></div>
-
-			<div class="page-header">
+	  <div class="page-header">
 	      <h1>Tables</h1>
       </div>
       <div class="row">
@@ -3783,10 +3693,10 @@
 	
 	<footer>
 		<div class="col-md-6 text-center">
-			<a class="logo" alt="Planetun" title="Planetun"></a>
+			<a class="logo" alt="ultragas" title="ultragas"></a>
 		</div>
 		<div class="copyright text-center">
-			<p> Copyright © 2013 -  Planetun Todos os direitos reservados</p>
+			<p> Copyright © 2013 -  ultragas Todos os direitos reservados</p>
 		</div>
     </footer>
 	

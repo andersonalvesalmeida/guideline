@@ -1,4 +1,4 @@
-// Alterações Planetun
+// Alterações ultragas
 
 body {
   //font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -110,7 +110,7 @@ legend {
 }
 
 // Icons
-.planetun-icon {
+.ultragas-icon {
   &:before {
     content: "";
     display: block;
@@ -121,25 +121,25 @@ legend {
   }
 }
 
-.planetun-erro{
+.ultragas-erro{
   &:before {
     background: transparent url(../images/icon_dinamic.png) no-repeat 0 -1px;
   } 
 }
 
-.planetun-sucesso{
+.ultragas-sucesso{
   &:before {
     background: transparent url(../images/icon_dinamic.png) no-repeat 0 -22px;
   } 
 }
 
-.planetun-neutro{
+.ultragas-neutro{
   &:before {
     background: transparent url(../images/icon_dinamic.png) no-repeat 0 -44px;
   } 
 }
 
-.planetun-info{
+.ultragas-info{
   &:before {
     background: transparent url(../images/icon_dinamic.png) no-repeat 0 -66px;
   } 

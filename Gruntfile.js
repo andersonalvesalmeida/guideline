@@ -173,16 +173,16 @@ module.exports = function(grunt) {
                 files: ['./assets/image/*.{png,jpg,gif}'],
                 tasks: ['imagemin']
             },
-            /*
+            
             livereload: {
                 options: {
                     livereload: true
                 },
                 files: [
-                    '../../app/views/*.php', 'guideline/assets/css/*.css'
+                    './assets/css/*.scss', './assets/css/*.js'
                 ]
             },
-            */
+            
         },
  
     });
