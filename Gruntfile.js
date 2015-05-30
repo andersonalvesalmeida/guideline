@@ -77,56 +77,56 @@ module.exports = function(grunt) {
         },
 
         concat: {
-			options: {
-			  	separator: ';',
-			},
-			javascript: {
-				src: [
-                  './assets/js/crossbrowser-console.js', //Implements cross browser functions to console.log
-				          './bower_components/jquery/dist/jquery.js',
-                  './bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
-                  './bower_components/bootstrap-sass-datepicker/js/bootstrap-sass-datepicker.js',
-                  './bower_components/bootstrap-sass-datepicker/js/locales/bootstrap-datepicker.pt-BR.js',
-                  './bower_components/noty/js/noty/packaged/jquery.noty.packaged.js',
-                  './bower_components/noty/js/noty/themes/bootstrap.js',
-                  './bower_components/bootstrap-filestyle/src/bootstrap-filestyle.js',
-                  './bower_components/datatables/media/js/jquery.dataTables.js',
-                  './assets/js/dataTables.bootstrap.js',
-                  './bower_components/moment/moment.js',
-                  './bower_components/moment/locale/pt-br.js',
-                  './bower_components/numeral/numeral.js',
-                  './bower_components/numeral/languages/pt-br.js',
-                  './bower_components/chartjs/Chart.js',
-                  './bower_components/chosen_v1.3.0/chosen.jquery.js',
-				  './assets/js/script.js'
-				],
-				dest: './guideline/js/guideline.js',
-			},
-            ie8: {
-                src: [
-                  './assets/js/crossbrowser-console.js', //Implements cross browser functions to console.log
-                  './bower_components/html5shiv/dist/html5shiv.js', //Implements html5 tags in olders browsers
-                  './bower_components/respond-minmax/dest/respond.src.js', //Implements media query functions in olders browsers
-                  './bower_components/jquery-1.9.1/index.js', //Jquery version compatible whith IE8
-                  './bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
-                  './bower_components/bootstrap-sass-datepicker/js/bootstrap-sass-datepicker.js',
-                  './bower_components/bootstrap-sass-datepicker/js/locales/bootstrap-datepicker.pt-BR.js',
-                  './bower_components/noty/js/noty/packaged/jquery.noty.packaged.js',
-                  './bower_components/noty/js/noty/themes/bootstrap.js',
-                  './bower_components/bootstrap-filestyle/src/bootstrap-filestyle.js',
-                  './bower_components/datatables/media/js/jquery.dataTables.js',
-                  './assets/js/dataTables.bootstrap.js',
-                  './bower_components/moment/moment.js',
-                  './bower_components/moment/locale/pt-br.js',
-                  './bower_components/numeral/numeral.js',
-                  './bower_components/numeral/languages/pt-br.js',
-                  './bower_components/chartjs/Chart.js',
-                  './bower_components/chosen_v1.3.0/chosen.jquery.js',
-                  './assets/js/script.js'
-                ],
-                dest: './guideline/js/guideline.ie8.js',
-            }
-	    },
+  			options: {
+  			  	separator: ';',
+  			},
+        javascript: {
+  				src: [
+                    './assets/js/crossbrowser-console.js', //Implements cross browser functions to console.log
+  				          './bower_components/jquery/dist/jquery.js',
+                    './bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
+                    './bower_components/bootstrap-sass-datepicker/js/bootstrap-sass-datepicker.js',
+                    './bower_components/bootstrap-sass-datepicker/js/locales/bootstrap-datepicker.pt-BR.js',
+                    './bower_components/noty/js/noty/packaged/jquery.noty.packaged.js',
+                    './bower_components/noty/js/noty/themes/bootstrap.js',
+                    './bower_components/bootstrap-filestyle/src/bootstrap-filestyle.js',
+                    //'./bower_components/datatables/media/js/jquery.dataTables.js',
+                    //'./assets/js/dataTables.bootstrap.js',
+                    './bower_components/moment/moment.js',
+                    './bower_components/moment/locale/pt-br.js',
+                    './bower_components/numeral/numeral.js',
+                    './bower_components/numeral/languages/pt-br.js',
+                    './bower_components/chartjs/Chart.js',
+                    './bower_components/chosen_v1.3.0/chosen.jquery.js',
+  				  './assets/js/script.js'
+  				],
+  				dest: './guideline/js/guideline.js',
+  			},
+              ie8: {
+                  src: [
+                    './assets/js/crossbrowser-console.js', //Implements cross browser functions to console.log
+                    './bower_components/html5shiv/dist/html5shiv.js', //Implements html5 tags in olders browsers
+                    './bower_components/respond-minmax/dest/respond.src.js', //Implements media query functions in olders browsers
+                    './bower_components/jquery-1.9.1/index.js', //Jquery version compatible whith IE8
+                    './bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
+                    './bower_components/bootstrap-sass-datepicker/js/bootstrap-sass-datepicker.js',
+                    './bower_components/bootstrap-sass-datepicker/js/locales/bootstrap-datepicker.pt-BR.js',
+                    './bower_components/noty/js/noty/packaged/jquery.noty.packaged.js',
+                    './bower_components/noty/js/noty/themes/bootstrap.js',
+                    './bower_components/bootstrap-filestyle/src/bootstrap-filestyle.js',
+                    //'./bower_components/datatables/media/js/jquery.dataTables.js',
+                    //'./assets/js/dataTables.bootstrap.js',
+                    './bower_components/moment/moment.js',
+                    './bower_components/moment/locale/pt-br.js',
+                    './bower_components/numeral/numeral.js',
+                    './bower_components/numeral/languages/pt-br.js',
+                    './bower_components/chartjs/Chart.js',
+                    './bower_components/chosen_v1.3.0/chosen.jquery.js',
+                    './assets/js/script.js'
+                  ],
+                  dest: './guideline/js/guideline.ie8.js',
+              }
+  	    },
 
         // Minify JS
         uglify: {

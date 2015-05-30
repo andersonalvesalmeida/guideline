@@ -247,11 +247,13 @@
 
 			<div class="clearfix"></div>
 
-			<div class="page-header">
+		<div class="page-header">
 	      <h1>Datatables</h1>
 	    </div>
 
-			<table class="table table-bordered table-striped dt">
+            <p class="text-danger">Comentado...</p>
+
+		<!-- <table class="table table-bordered table-striped dt">
         <thead>
             <tr>
                 <th>Nome</th>
@@ -3000,9 +3002,62 @@
                 <td>$112,000</td>
             </tr>
         </tbody>
-      </table>
+      </table> -->
 	
 			<div class="clearfix"></div>
+
+	<div class="page-header">
+		<h1>Modals</h1>
+	</div>
+	<div class="well">
+		
+		<!-- Modal com conteúdo e detalhe no título-->
+		<div class="modal fade" id="modal-detail" tabindex="-1" role="dialog" aria-labelledby="modal-Label" aria-hidden="true">
+			<div class="modal-dialog" style="width:80% !important;">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+						</button>
+						<h3 class="text-info">Cabeçalho da modal</h3>
+						<div align="right">
+							<h4 class="text-primary">
+								Nº do detalhe: <span class="text-danger" id="modal-detalhe-pedido-numero-pedido">0102146-0</span>
+							</h4>
+						</div>
+					</div>
+					<div class="modal-body" id='geralinner'>
+						<div class="row" style="margin-left: 10px;">
+							Corpo da Modal
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+						<button type="button" class="btn btn-default" id="btn-simple-modal-confirm">Confirm</button>
+			  		</div>
+				</div>
+			</div>
+	    </div>
+
+		<!-- Modal perguntar por ação -->
+	    <div class="modal fade" id="modal-alert">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+						<p>Confirm action?</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+						<button type="button" class="btn btn-primary" data-dismiss="modal" id="btn-confirma-modal-alert">Yes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<p>Se a <a href="javascript:void(0)" id="act-simple-modal-sample">Simple modal sample.</a></p>
+
+
+	</div>
 
       <div class="page-header">
         <h1>Chosen</h1>
@@ -3710,7 +3765,8 @@
 
     <script type="text/javascript">
 		$('document').ready(function(){
-      table1 = $('.dt')
+      	
+      	/*table1 = $('.dt')
         .on( 'processing.dt', function ( e, settings, processing ) {
         if(processing){
             notificar('information', 'Processando...');
@@ -3734,7 +3790,7 @@
             "drawCallback": function( settings ) {
                 formatData();
             }
-        });
+        });*/
         
         var config = {
           '.chosen-select'           : {},
@@ -3761,6 +3817,31 @@
               }
           });
       };
+
+
+	/*      Modals      */
+
+	$('#act-simple-modal-sample').on('click', function(){
+		$('#modal-detail').modal({ 
+			backdrop: 'static',
+			keyboard: false
+		});
+	});
+
+	$('#btn-simple-modal-confirm').on('click', function(){
+		$('#modal-alert').modal({ 
+			backdrop: 'static',
+			keyboard: false
+		});
+	})
+
+	$('#btn-confirma-modal-alert').on('click', function(){
+		$('#modal-alert').modal('hide');
+		$('#modal-detail').modal('hide');
+	})
+
+	
+
 
       console.time( 'foo' );
       console.log ( 'log' );
