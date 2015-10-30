@@ -177,12 +177,12 @@
         modal		: modal,
         closeWith 	: closeWith,
         animation: {
-        open: {height: 'toggle'},
-        close: {height: 'toggle'},
-        easing: 'swing',
-        speed: 0 // opening & closing animation speed
-	    },
-    });
+          open: {height: 'toggle'},
+          close: {height: 'toggle'},
+          easing: 'swing',
+          speed: 0 // opening & closing animation speed
+  	    }
+      });
     return n;
   }
   
@@ -268,12 +268,8 @@
   
   
   
-  
-  
-  
 
 (function(){
-	
 	 //Datatables
    	
    	$.extend( $.fn.dataTable.defaults, {
@@ -288,7 +284,7 @@
         "sLoadingRecords": "Carregando...",
         "sProcessing": "Processando...",
         "sZeroRecords": "Nenhum registro encontrado",
-        "sSearch": "Pesquisar",
+        "sSearch": "Pesquisar ",
         "oPaginate": {
           "sNext": "Próximo",
           "sPrevious": "Anterior",
@@ -301,8 +297,8 @@
         }
       }
     });
-	
 	//Personalizar inputs type file que não permitem uploads multiplos.
+	
 	$(':file').each(function(){
 	    if(typeof($(this).attr('multiple')) === 'undefined' ){
         $(this).filestyle({buttonName: 'btn-default'});
@@ -326,6 +322,14 @@
    		notificar(type, text);
    	});
    	
+    
+     
+    
+    
+    
+     
+     
+    
     
     
 

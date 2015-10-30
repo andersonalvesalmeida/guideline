@@ -104,7 +104,7 @@ body {
   // Cells
   > thead,
   > tfoot {
-      background-color: $primary-color;
+      background-color: $brand-primary;
       color: $btn-default-bg;
       font-size: $font-size-small;
       tr{
@@ -121,6 +121,9 @@ body {
         td{
           padding: 4px;
           font-size: 12px;  
+        }
+        &.danger{
+          color: #FFFFFF;
         }
       }
 }
@@ -177,12 +180,19 @@ body {
 }
 
 .navbar-form{
-  padding-top: 15px;
+  padding-top: 5px;
 }
 
 .navbar-brand,
 .navbar-nav > li > a {
   text-shadow: 0 1px 0 rgba(255,255,255,.25);
+}
+
+.navbar-form.navbar-right:last-child{
+	margin-right: 15px;
+}
+.navbar-form a{
+	margin: 0 5px;
 }
 
 // Inverted navbar
@@ -304,6 +314,12 @@ body {
   @include box-shadow(0 1px 2px rgba(0,0,0,.05));
 }
 
+.panel-danger>.panel-heading{
+  color: #FFFFFF;
+}
+
+
+
 // Mixin for generating new styles
 @mixin panel-heading-styles($color) {
   @include gradient-vertical($start-color: $color, $end-color: darken($color, 5%));
@@ -316,7 +332,6 @@ body {
 .panel-info > .panel-heading      { @include panel-heading-styles($panel-info-heading-bg); }
 .panel-warning > .panel-heading   { @include panel-heading-styles($panel-warning-heading-bg); }
 .panel-danger > .panel-heading    { @include panel-heading-styles($panel-danger-heading-bg); }
-
 
 //
 // Wells
@@ -334,7 +349,46 @@ body {
 // --------------------------------------------------
 
 
-.modal{
-	z-index: 1050;
+.modal-backdrop{
+	z-index: 0;
+}
+
+.modal-header{
+	padding: 5px 15px;
+	
+	h4{
+	  color: $brand-primary;
+	}
+}
+
+.modal-header-detail{
+	float: right;
+	margin-right: 10px
+}
+
+.modal-header .close {
+	margin-top: 7px;
+}
+
+.text-footer {
+	float: left;
+}
+
+.modal-dialog.modal-lg {
+  width: 80%;
+}
+
+.modal-body {
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
+}
+
+
+//
+// Forms
+// --------------------------------------------------
+
+.form-group {
+  margin-bottom: 5px;
 }
 

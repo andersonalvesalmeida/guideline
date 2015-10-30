@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Tela 1</title>
 	<link rel="stylesheet" href="guideline/css/guideline.css">
+
 </head>
 <body>
 
@@ -102,7 +103,58 @@
               <td><p>p. Bootstrap heading <small>Secondary text</small></p></td>
             </tr>
           </tbody>
-        </table>			
+        </table>
+        
+        <div class="page-header">
+    		<h1>Forms</h1>
+    	</div>
+    	<div>
+    		<form class="form-horizontal">
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"> Remember me
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-default">Sign in</button>
+                </div>
+              </div>
+            </form>
+    	</div>
+        
+        <div class="page-header">
+    		<h1>Form Validate</h1>
+    	</div>
+    	<div>
+    		<form id="form-validate">
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" name="email" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" name="name" placeholder="Enter name">
+                </div>
+                <a href="javascript:void(0)" class="btn btn-default" id="btn-form-validate">Submit</a>
+            </form>
+    	</div>
 		
 
 	  <div class="page-header">
@@ -174,7 +226,7 @@
           </table>
         </div>
       </div>
-
+      
       <div class="row">
         <div class="col-md-6">
           <table class="table table-bordered">
@@ -245,15 +297,89 @@
         </div>
       </div>
 
-			<div class="clearfix"></div>
+    <div class="clearfix"></div>
+    
+        <h2>Table colors</h2>
+      
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Column heading</th>
+                      <th>Column heading</th>
+                      <th>Column heading</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="active">
+                      <th scope="row">1</th>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                    </tr>
+                    <tr class="success">
+                      <th scope="row">3</th>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                    </tr>
+                    <tr class="info">
+                      <th scope="row">5</th>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">6</th>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                    </tr>
+                    <tr class="warning">
+                      <th scope="row">7</th>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">8</th>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                    </tr>
+                    <tr class="danger">
+                      <th scope="row">9</th>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+          
+        </div>
+      
+       <div class="clearfix"></div>
 
 		<div class="page-header">
 	      <h1>Datatables</h1>
 	    </div>
 
-            <p class="text-danger">Comentado...</p>
-
-		<!-- <table class="table table-bordered table-striped dt">
+		 <table class="table table-bordered table-striped dt">
         <thead>
             <tr>
                 <th>Nome</th>
@@ -3002,26 +3128,107 @@
                 <td>$112,000</td>
             </tr>
         </tbody>
-      </table> -->
+      </table>
+      
+      
+      <table class="table table-bordered table-striped dt2">
+				<thead>
+					<tr>
+					    <th>Portaria</th>
+					    <th>Origem</th>
+					    <th>Vendedor</th>
+					    <th>Cliente</th>
+				    	<th>Endereco</th>
+					    <th>Telefone</th>
+					    <th>Email</th>
+					    <th>Produto</th>
+					    <th>Preco</th>
+					    <th>Forma de Pagamento</th>
+					    <th>Data de Solicitacao</th>
+					    <th>Hora de Solicitacao</th>
+					    <th>situacao</th>
+					    <th>horaEntrega</th>
+					</tr>
+				</thead>
+				<tbody>
+        	<tr>
+        		<td nowrap="true"></td>
+        		<td nowrap="true">Web</td>
+        		<td nowrap="true">Diego Medeiros</td>
+        		<td nowrap="true">Cliente inserido pelo web api</td>
+        		<td nowrap="true">Curaçao / São Vicente / SP</td>
+        		<td nowrap="true">35663414</td>
+        		<td nowrap="true">cliente5@email.com.br</td>
+        		<td nowrap="true">P13</td>
+        		<td nowrap="true">50</td>
+        		<td nowrap="true">Dinheiro</td>
+        		<td nowrap="true">06/06/2015</td>
+        		<td nowrap="true">17:54:24</td>
+        		<td nowrap="true">Solicitado</td>
+        		<td nowrap="true">-</td>
+        	</tr>
+        	<tr>
+        		<td nowrap="true"></td>
+        		<td nowrap="true">Web</td>
+        		<td nowrap="true">Diego Medeiros</td>
+        		<td nowrap="true">Cliente inserido pelo web api</td>
+        		<td nowrap="true">Rua Paulo Horneaux de Moura / São Vicente / São Paulo</td>
+        		<td nowrap="true">35663414</td>
+        		<td nowrap="true">cliente5@email.com.br</td>
+        		<td nowrap="true">P13</td>
+        		<td nowrap="true">50</td>
+        		<td nowrap="true">Dinheiro</td>
+        		<td nowrap="true">10/06/2015</td>
+        		<td nowrap="true">18:38:17</td>
+        		<td nowrap="true">Solicitado</td>
+        		<td nowrap="true">-</td>
+        	</tr>
+        </tbody>
+			</table>
 	
 			<div class="clearfix"></div>
 
 	<div class="page-header">
 		<h1>Modals</h1>
 	</div>
-	<div class="well">
+	<div>
 		
-		<!-- Modal com conteúdo e detalhe no título-->
-		<div class="modal fade" id="modal-detail" tabindex="-1" role="dialog" aria-labelledby="modal-Label" aria-hidden="true">
-			<div class="modal-dialog" style="width:80% !important;">
+		<!-- Modal com conteúdo sem detalhe no título-->
+		<div class="modal fade" id="modal-simple" tabindex="-1" role="dialog" aria-labelledby="modal-Label" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">
 							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 						</button>
-						<h3 class="text-info">Cabeçalho da modal</h3>
+						<h4>Cabeçalho da modal</h4>
+					</div>
+					<div class="modal-body" id='geralinner'>
+						<div class="row" style="margin-left: 10px;">
+							Corpo da Modal
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Confirm</button>
+			  		</div>
+				</div>
+			</div>
+	    </div>
+		
+		<!-- Modal com conteúdo e detalhe no título-->
+		<div class="modal fade" id="modal-detail" tabindex="-1" role="dialog" aria-labelledby="modal-Label" aria-hidden="true">
+			<div class="modal-dialog modal-lg" >
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+						</button>
+						<div class="pull-left">
+						    <h4>Cabeçalho da modal</h4>
+						</div>
 						<div align="right">
-							<h4 class="text-primary">
+							<h4>
 								Nº do detalhe: <span class="text-danger" id="modal-detalhe-pedido-numero-pedido">0102146-0</span>
 							</h4>
 						</div>
@@ -3033,7 +3240,7 @@
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-						<button type="button" class="btn btn-default" id="btn-simple-modal-confirm">Confirm</button>
+						<button type="button" class="btn btn-primary" id="btn-simple-modal-confirm">Confirm</button>
 			  		</div>
 				</div>
 			</div>
@@ -3041,7 +3248,7 @@
 
 		<!-- Modal perguntar por ação -->
 	    <div class="modal fade" id="modal-alert">
-			<div class="modal-dialog">
+			<div class="modal-dialog modal-sm">
 				<div class="modal-content">
 					<div class="modal-body">
 						<p>Confirm action?</p>
@@ -3054,7 +3261,8 @@
 			</div>
 		</div>
 
-		<p>Se a <a href="javascript:void(0)" id="act-simple-modal-sample">Simple modal sample.</a></p>
+		<p>Se a <a href="javascript:void(0)" id="act-detail-modal-sample">modal whith detail in header sample.</a></p>
+		<p>Se a <a href="javascript:void(0)" id="act-simple-modal-sample">modal whithout detail in header sample.</a></p>
 
 
 	</div>
@@ -3648,7 +3856,7 @@
 	      <div class="col-sm-4">
 	        <div class="panel panel-default">
 	          <div class="panel-heading">
-	            <h3 class="panel-title">Panel title</h3>
+	            <h3 class="panel-title">Panel title - <a href="javascript:void(0)"> (This is a link) </a></h3>
 	          </div>
 	          <div class="panel-body">
 	            Panel content
@@ -3656,7 +3864,15 @@
 	        </div>
 	        <div class="panel panel-primary">
 	          <div class="panel-heading">
-	            <h3 class="panel-title">Panel title</h3>
+	            <h3 class="panel-title">Panel title - <a href="javascript:void(0)"> (This is a link) </a></h3>
+	          </div>
+	          <div class="panel-body">
+	            Panel content
+	          </div>
+	        </div>
+	        <div class="panel panel-primary">
+	          <div class="panel-heading">
+	            <h3 class="panel-title">Panel title - <a href="javascript:void(0)"> (This is a link) </a></h3>
 	          </div>
 	          <div class="panel-body">
 	            Panel content
@@ -3666,7 +3882,7 @@
 	      <div class="col-sm-4">
 	        <div class="panel panel-success">
 	          <div class="panel-heading">
-	            <h3 class="panel-title">Panel title</h3>
+	            <h3 class="panel-title">Panel title - <a href="javascript:void(0)"> (This is a link) </a></h3>
 	          </div>
 	          <div class="panel-body">
 	            Panel content
@@ -3674,7 +3890,7 @@
 	        </div>
 	        <div class="panel panel-info">
 	          <div class="panel-heading">
-	            <h3 class="panel-title">Panel title</h3>
+	            <h3 class="panel-title">Panel title - <a href="javascript:void(0)"> (This is a link) </a></h3>
 	          </div>
 	          <div class="panel-body">
 	            Panel content
@@ -3684,7 +3900,7 @@
 	      <div class="col-sm-4">
 	        <div class="panel panel-warning">
 	          <div class="panel-heading">
-	            <h3 class="panel-title">Panel title</h3>
+	            <h3 class="panel-title">Panel title - <a href="javascript:void(0)"> (This is a link) </a></h3>
 	          </div>
 	          <div class="panel-body">
 	            Panel content
@@ -3692,7 +3908,7 @@
 	        </div>
 	        <div class="panel panel-danger">
 	          <div class="panel-heading">
-	            <h3 class="panel-title">Panel title</h3>
+	            <h3 class="panel-title">Panel title - <a href="javascript:void(0)"> (This is a link) </a></h3>
 	          </div>
 	          <div class="panel-body">
 	            Panel content
@@ -3766,20 +3982,20 @@
     <script type="text/javascript">
 		$('document').ready(function(){
       	
-      	/*table1 = $('.dt')
+      	table1 = $('.dt')
         .on( 'processing.dt', function ( e, settings, processing ) {
-        if(processing){
-            notificar('information', 'Processando...');
-        }else{
-            $.noty.closeAll();
-        }
-        return false;
+            if(processing){
+                notificar('information', 'Processando...');
+            }else{
+                $.noty.closeAll();
+            }
+            return false;
         })
         .DataTable({
-        "searching": false,
-        "lengthMenu": [ 10, 50, 100, 200, 500, 1000 ],
-        "pageLength": 10,
-        "columns": [
+            "searching": true,
+            "lengthMenu": [ 10, 50, 100, 200, 500, 1000 ],
+            "pageLength": 10,
+            "columns": [
                 null,
                 null,
                 null,
@@ -3790,7 +4006,19 @@
             "drawCallback": function( settings ) {
                 formatData();
             }
-        });*/
+        });
+        
+        var tt = new $.fn.dataTable.TableTools( table1 );
+        $( tt.fnContainer() ).insertBefore('div.dataTables_wrapper');
+        
+        
+        $('.dt2').DataTable({
+          "scrollX": "100%"
+		      ,"scrollX": true
+        });
+        
+        
+        
         
         var config = {
           '.chosen-select'           : {},
@@ -3822,6 +4050,13 @@
 	/*      Modals      */
 
 	$('#act-simple-modal-sample').on('click', function(){
+		$('#modal-simple').modal({ 
+			backdrop: 'static',
+			keyboard: false
+		});
+	});
+	
+	$('#act-detail-modal-sample').on('click', function(){
 		$('#modal-detail').modal({ 
 			backdrop: 'static',
 			keyboard: false
@@ -3839,9 +4074,39 @@
 		$('#modal-alert').modal('hide');
 		$('#modal-detail').modal('hide');
 	})
+	
+	$('#form-validate').validate({
+        rules: {
+            email: {
+                required: true,
+                email: true
+            },
+            name: {
+                minlength: 3,
+                maxlength: 15,
+                required: true
+            }
+        },
+        messages: {
+            name: {
+                required: "Please specify your name",
+                min: "Enter min 3 letters",
+                min: "Enter max 15 letters"
+            },
+            email: {
+                required: "We need your email address to contact you",
+                email: "Your email address must be in the format of name@domain.com"
+            }
+        }
+    });
+    
+    $('#btn-form-validate').on('click', function(){
+	    console.log("teste");
+	    var form = $('#form-validate').valid();
+	    console.log(form);
+	})
 
 	
-
 
       console.time( 'foo' );
       console.log ( 'log' );

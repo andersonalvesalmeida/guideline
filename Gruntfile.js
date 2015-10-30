@@ -17,7 +17,8 @@ module.exports = function(grunt) {
                 src: [
                     'bower_components/datatables/media/css/jquery.dataTables.css',
                     'bower_components/blueimp-file-upload/css/jquery.fileupload.css',
-                    'bower_components/blueimp-file-upload/css/jquery.fileupload-ui.css'
+                    'bower_components/blueimp-file-upload/css/jquery.fileupload-ui.css',
+                    'bower_components/jquery-loading/dist/jquery.loading.css',
                 ]
             }
         },
@@ -80,52 +81,66 @@ module.exports = function(grunt) {
   			options: {
   			  	separator: ';',
   			},
-        javascript: {
+            javascript: {
   				src: [
-                    './assets/js/crossbrowser-console.js', //Implements cross browser functions to console.log
-  				          './bower_components/jquery/dist/jquery.js',
+  				    './bower_components/html5shiv/dist/html5shiv.js', //Implements html5 tags in olders browsers
+                    './bower_components/respond-minmax/dest/respond.src.js', //Implements media query functions in olders browsers
+                    './bower_components/jquery-legacy/jquery.js', //Jquery version compatible whith IE8
+                    //'./assets/js/crossbrowser-console.js', //Implements cross browser functions to console.log
+  				    //'./bower_components/jquery-modern/dist/jquery.js',
                     './bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
                     './bower_components/bootstrap-sass-datepicker/js/bootstrap-sass-datepicker.js',
                     './bower_components/bootstrap-sass-datepicker/js/locales/bootstrap-datepicker.pt-BR.js',
                     './bower_components/noty/js/noty/packaged/jquery.noty.packaged.js',
                     './bower_components/noty/js/noty/themes/bootstrap.js',
                     './bower_components/bootstrap-filestyle/src/bootstrap-filestyle.js',
-                    //'./bower_components/datatables/media/js/jquery.dataTables.js',
-                    //'./assets/js/dataTables.bootstrap.js',
+                    './bower_components/datatables/media/js/jquery.dataTables.js',
+                    './bower_components/datatables-tabletools/js/dataTables.tableTools.js',
+                    './assets/js/dataTables.bootstrap.js',
                     './bower_components/moment/moment.js',
                     './bower_components/moment/locale/pt-br.js',
                     './bower_components/numeral/numeral.js',
                     './bower_components/numeral/languages/pt-br.js',
                     './bower_components/chartjs/Chart.js',
                     './bower_components/chosen_v1.3.0/chosen.jquery.js',
-  				  './assets/js/script.js'
+                    './bower_components/jquery-validation/dist/jquery.validate.js',
+                    './bower_components/jquery-validation/dist/additional-methods.js',
+                    './bower_components/jQuery-Mask-Plugin/dist/jquery.mask.js',
+                    './assets/js/validation.js',
+  				    './assets/js/script.js'
   				],
   				dest: './guideline/js/guideline.js',
   			},
-              ie8: {
-                  src: [
-                    './assets/js/crossbrowser-console.js', //Implements cross browser functions to console.log
+            ie8: {
+                src: [
+                    //'./assets/js/crossbrowser-console.js', //Implements cross browser functions to console.log
                     './bower_components/html5shiv/dist/html5shiv.js', //Implements html5 tags in olders browsers
                     './bower_components/respond-minmax/dest/respond.src.js', //Implements media query functions in olders browsers
-                    './bower_components/jquery-1.9.1/index.js', //Jquery version compatible whith IE8
+                    './bower_components/jquery-legacy/jquery.js', //Jquery version compatible whith IE8
                     './bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
                     './bower_components/bootstrap-sass-datepicker/js/bootstrap-sass-datepicker.js',
                     './bower_components/bootstrap-sass-datepicker/js/locales/bootstrap-datepicker.pt-BR.js',
                     './bower_components/noty/js/noty/packaged/jquery.noty.packaged.js',
                     './bower_components/noty/js/noty/themes/bootstrap.js',
                     './bower_components/bootstrap-filestyle/src/bootstrap-filestyle.js',
-                    //'./bower_components/datatables/media/js/jquery.dataTables.js',
-                    //'./assets/js/dataTables.bootstrap.js',
+                    './bower_components/datatables/media/js/jquery.dataTables.js',
+                    './bower_components/datatables-tabletools/js/dataTables.tableTools.js',
+                    './assets/js/dataTables.bootstrap.js',
                     './bower_components/moment/moment.js',
                     './bower_components/moment/locale/pt-br.js',
                     './bower_components/numeral/numeral.js',
                     './bower_components/numeral/languages/pt-br.js',
                     './bower_components/chartjs/Chart.js',
                     './bower_components/chosen_v1.3.0/chosen.jquery.js',
-                    './assets/js/script.js'
-                  ],
-                  dest: './guideline/js/guideline.ie8.js',
-              }
+                    './bower_components/jquery-validation/dist/jquery.validate.js',
+                    './bower_components/jquery-validation/dist/additional-methods.js',
+                    './assets/js/validation.js',
+                    './bower_components/jQuery-Mask-Plugin/dist/jquery.mask.js',
+                    './bower_components/jquery-loading/dist/jquery.loading.js',
+                      './assets/js/script.js'
+                ],
+                dest: './guideline/js/guideline.ie8.js',
+            }
   	    },
 
         // Minify JS
@@ -153,6 +168,18 @@ module.exports = function(grunt) {
             }
         },
         
+        // make a zipfile
+        compress: {
+          main: {
+            options: {
+              archive: './guideline/guideline.zip'
+            },
+            files: [
+              {src: ['guideline/css/**', 'guideline/fonts/**', 'guideline/images/**', 'guideline/js/**','guideline/swf/**'], dest: '/'}
+            ]
+          }
+        },
+        
         // Watch files and trigger tasks
         watch: {
             sass: {
@@ -173,6 +200,12 @@ module.exports = function(grunt) {
                 files: ['./assets/image/*.{png,jpg,gif}'],
                 tasks: ['imagemin']
             },
+            
+            compress: {
+                files: ['./guideline/*.*'],		//arquivos monitorados
+                tasks: ['compress']
+            },
+            
             
             livereload: {
                 options: {
@@ -195,6 +228,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-contrib-watch');
  
     // 3. Where we tell Grunt what to do when we type "grunt" into the terminal.

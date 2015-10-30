@@ -1,0 +1,129 @@
+//colors
+$color_alto_approx: $gray-lighter;
+$color_gallery_approx: $gray-lighter;
+$white: #ffffff;
+
+//@extend-elements
+//original selectors
+//.tabs-left > .nav-tabs > li > a, .tabs-right > .nav-tabs > li > a
+%extend_1 {
+	min-width: 74px;
+	margin-right: 0;
+	margin-bottom: 3px;
+}
+
+
+.tabs-below > .nav-tabs {
+	border-bottom: 0;
+	border-top: 1px solid $color_alto_approx;
+	> {
+		li {
+			margin-top: -1px;
+			margin-bottom: 0;
+			> a {
+				//Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+				border-radius: 0 0 4px 4px;
+				&:hover {
+					border-top-color: $color_alto_approx;
+					border-bottom-color: transparent;
+				}
+				&:focus {
+					border-top-color: $color_alto_approx;
+					border-bottom-color: transparent;
+				}
+			}
+		}
+		.active > a {
+			border-color: transparent $color_alto_approx $color_alto_approx $color_alto_approx;
+			&:hover {
+				border-color: transparent $color_alto_approx $color_alto_approx $color_alto_approx;
+			}
+			&:focus {
+				border-color: transparent $color_alto_approx $color_alto_approx $color_alto_approx;
+			}
+		}
+	}
+}
+.tabs-right > .nav-tabs {
+	border-bottom: 0;
+	float: right;
+	margin-left: 19px;
+	border-left: 1px solid $color_alto_approx;
+	> li {
+		float: none;
+		> a {
+			@extend %extend_1;
+			margin-left: -1px;
+			//Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+			border-radius: 0 4px 4px 0;
+			&:hover {
+				border-color: $color_gallery_approx $color_gallery_approx $color_gallery_approx $color_alto_approx;
+			}
+			&:focus {
+				border-color: $color_gallery_approx $color_gallery_approx $color_gallery_approx $color_alto_approx;
+			}
+		}
+	}
+	.active > a {
+		border-color: $color_alto_approx $color_alto_approx $color_alto_approx transparent;
+		*border-left-color: $white;
+		&:hover {
+			border-color: $color_alto_approx $color_alto_approx $color_alto_approx transparent;
+			*border-left-color: $white;
+		}
+		&:focus {
+			border-color: $color_alto_approx $color_alto_approx $color_alto_approx transparent;
+			*border-left-color: $white;
+		}
+	}
+}
+.tabs-left > .nav-tabs {
+	border-bottom: 0;
+	float: left;
+	margin-right: 19px;
+	border-right: 1px solid $color_alto_approx;
+	> li {
+		float: none;
+		> a {
+			@extend %extend_1;
+			margin-right: -1px;
+			//Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+			border-radius: 4px 0 0 4px;
+			&:hover {
+				border-color: $color_gallery_approx $color_alto_approx $color_gallery_approx $color_gallery_approx;
+			}
+			&:focus {
+				border-color: $color_gallery_approx $color_alto_approx $color_gallery_approx $color_gallery_approx;
+			}
+		}
+	}
+	.active > a {
+		border-color: $color_alto_approx transparent $color_alto_approx $color_alto_approx;
+		*border-right-color: $white;
+		&:hover {
+			border-color: $color_alto_approx transparent $color_alto_approx $color_alto_approx;
+			*border-right-color: $white;
+		}
+		&:focus {
+			border-color: $color_alto_approx transparent $color_alto_approx $color_alto_approx;
+			*border-right-color: $white;
+		}
+	}
+}
+.tab-content > {
+	.tab-pane {
+		display: none;
+        margin-top: 10px;
+	}
+	.active {
+		display: block;
+	}
+}
+.pill-content > {
+	.pill-pane {
+		display: none;
+	}
+	.active {
+		display: block;
+	}
+}

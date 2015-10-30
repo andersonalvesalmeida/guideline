@@ -23,3 +23,8 @@ assets:
     datepicker style - http://bootstrap-datepicker.readthedocs.org/en/release/
     Notity - http://ned.im/noty/
     bootstrap file upload style - http://markusslima.github.io/bootstrap-filestyle
+
+
+Grunt
+
+//bower install jquery-legacy=jquery#.9.1 jquery-modern=jquery#2.1.1 --save
