@@ -236,5 +236,5 @@ module.exports = function(grunt) {
     
     
     // Build
-	grunt.registerTask( 'build', ["sass-convert", "sass:dist", "replace:dist", "copy:main", "concat:javascript", "uglify", "imagemin"] );
+	grunt.registerTask( 'build', ["sass-convert", "sass:dist", "replace:dist", "copy:main", "concat:javascript", "uglify", "compress"] );
 };
